@@ -12,7 +12,7 @@ end sprite_rom;
 architecture Behavioral of sprite_rom is
     type rom_type is array (0 to 63) of STD_LOGIC;  
     signal rom : rom_type := (
-        '0', '0', '1', '1', '1', '1', '0', '0',  -- Rij 1 (voorbeeld)
+        '0', '0', '1', '1', '1', '1', '0', '0',  -- Rij 1 (test)
         '0', '1', '1', '0', '0', '1', '1', '0',  -- Rij 2
         '1', '1', '0', '0', '0', '0', '1', '1',  -- Rij 3
         '1', '1', '0', '1', '1', '0', '1', '1',  -- Rij 4
