@@ -1,0 +1,2387 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Feb 17 14:30:50 2025
+| Host         : DESKTOP-H0VVJ00 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file DVI_Top_timing_summary_routed.rpt -pb DVI_Top_timing_summary_routed.pb -rpx DVI_Top_timing_summary_routed.rpx -warn_on_violation
+| Design       : DVI_Top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (15)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (15)
+--------------------------------
+ There are 15 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     33.746        0.000                      0                   59        0.213        0.000                      0                   59        3.000        0.000                       0                    41  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                       ------------       ----------      --------------
+clk100                      {0.000 5.000}      10.000          100.000         
+  clk_25_clkDVIprescaler    {0.000 20.000}     40.000          25.000          
+  clkfbout_clkDVIprescaler  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                           WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                           -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk100                                                                                                                                                                        3.000        0.000                       0                     1  
+  clk_25_clkDVIprescaler         33.746        0.000                      0                   59        0.213        0.000                      0                   59       19.500        0.000                       0                    37  
+  clkfbout_clkDVIprescaler                                                                                                                                                    7.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group                From Clock                To Clock                
+----------                ----------                --------                
+(none)                    clk_25_clkDVIprescaler                              
+(none)                    clkfbout_clkDVIprescaler                            
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk100
+  To Clock:  clk100
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk100
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk100 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_25_clkDVIprescaler
+  To Clock:  clk_25_clkDVIprescaler
+
+Setup :            0  Failing Endpoints,  Worst Slack       33.746ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.213ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       19.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             33.746ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/green_reg[2]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        6.142ns  (logic 1.196ns (19.473%)  route 4.946ns (80.527%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.311ns = ( 38.689 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.887ns
+    Clock Pessimism Removal (CPR):    0.491ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.625    -0.887    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.419    -0.468 f  display_instance/vcount_reg[7]/Q
+                         net (fo=12, routed)          1.058     0.590    display_instance/vcount_reg_n_0_[7]
+    SLICE_X2Y91          LUT6 (Prop_lut6_I4_O)        0.299     0.889 f  display_instance/blue[0]_i_20/O
+                         net (fo=1, routed)           1.202     2.091    display_instance/blue[0]_i_20_n_0
+    SLICE_X2Y92          LUT5 (Prop_lut5_I4_O)        0.150     2.241 r  display_instance/blue[0]_i_10/O
+                         net (fo=1, routed)           1.098     3.339    display_instance/blue[0]_i_10_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.328     3.667 r  display_instance/blue[0]_i_2/O
+                         net (fo=6, routed)           1.588     5.255    display_instance/blue[0]_i_2_n_0
+    SLICE_X0Y100         FDRE                                         r  display_instance/green_reg[2]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.684    38.689    display_instance/clk_25
+    SLICE_X0Y100         FDRE                                         r  display_instance/green_reg[2]_lopt_replica/C
+                         clock pessimism              0.491    39.179    
+                         clock uncertainty           -0.098    39.082    
+    SLICE_X0Y100         FDRE (Setup_fdre_C_D)       -0.081    39.001    display_instance/green_reg[2]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         39.001    
+                         arrival time                          -5.255    
+  -------------------------------------------------------------------
+                         slack                                 33.746    
+
+Slack (MET) :             33.943ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/green_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.958ns  (logic 1.196ns (20.073%)  route 4.762ns (79.927%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        0.066ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.311ns = ( 38.689 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.887ns
+    Clock Pessimism Removal (CPR):    0.491ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.625    -0.887    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.419    -0.468 f  display_instance/vcount_reg[7]/Q
+                         net (fo=12, routed)          1.058     0.590    display_instance/vcount_reg_n_0_[7]
+    SLICE_X2Y91          LUT6 (Prop_lut6_I4_O)        0.299     0.889 f  display_instance/blue[0]_i_20/O
+                         net (fo=1, routed)           1.202     2.091    display_instance/blue[0]_i_20_n_0
+    SLICE_X2Y92          LUT5 (Prop_lut5_I4_O)        0.150     2.241 r  display_instance/blue[0]_i_10/O
+                         net (fo=1, routed)           1.098     3.339    display_instance/blue[0]_i_10_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.328     3.667 r  display_instance/blue[0]_i_2/O
+                         net (fo=6, routed)           1.405     5.071    display_instance/blue[0]_i_2_n_0
+    SLICE_X0Y100         FDRE                                         r  display_instance/green_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.684    38.689    display_instance/clk_25
+    SLICE_X0Y100         FDRE                                         r  display_instance/green_reg[2]/C
+                         clock pessimism              0.491    39.179    
+                         clock uncertainty           -0.098    39.082    
+    SLICE_X0Y100         FDRE (Setup_fdre_C_D)       -0.067    39.015    display_instance/green_reg[2]
+  -------------------------------------------------------------------
+                         required time                         39.015    
+                         arrival time                          -5.071    
+  -------------------------------------------------------------------
+                         slack                                 33.943    
+
+Slack (MET) :             34.057ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/blue_reg[0]_lopt_replica_3/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.765ns  (logic 1.196ns (20.747%)  route 4.569ns (79.253%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.486ns = ( 38.514 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.887ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.625    -0.887    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.419    -0.468 f  display_instance/vcount_reg[7]/Q
+                         net (fo=12, routed)          1.058     0.590    display_instance/vcount_reg_n_0_[7]
+    SLICE_X2Y91          LUT6 (Prop_lut6_I4_O)        0.299     0.889 f  display_instance/blue[0]_i_20/O
+                         net (fo=1, routed)           1.202     2.091    display_instance/blue[0]_i_20_n_0
+    SLICE_X2Y92          LUT5 (Prop_lut5_I4_O)        0.150     2.241 r  display_instance/blue[0]_i_10/O
+                         net (fo=1, routed)           1.098     3.339    display_instance/blue[0]_i_10_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.328     3.667 r  display_instance/blue[0]_i_2/O
+                         net (fo=6, routed)           1.211     4.878    display_instance/blue[0]_i_2_n_0
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.510    38.514    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_3/C
+                         clock pessimism              0.576    39.090    
+                         clock uncertainty           -0.098    38.993    
+    SLICE_X0Y99          FDRE (Setup_fdre_C_D)       -0.058    38.935    display_instance/blue_reg[0]_lopt_replica_3
+  -------------------------------------------------------------------
+                         required time                         38.935    
+                         arrival time                          -4.878    
+  -------------------------------------------------------------------
+                         slack                                 34.057    
+
+Slack (MET) :             34.242ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/blue_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.570ns  (logic 1.196ns (21.472%)  route 4.374ns (78.528%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.486ns = ( 38.514 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.887ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.625    -0.887    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.419    -0.468 f  display_instance/vcount_reg[7]/Q
+                         net (fo=12, routed)          1.058     0.590    display_instance/vcount_reg_n_0_[7]
+    SLICE_X2Y91          LUT6 (Prop_lut6_I4_O)        0.299     0.889 f  display_instance/blue[0]_i_20/O
+                         net (fo=1, routed)           1.202     2.091    display_instance/blue[0]_i_20_n_0
+    SLICE_X2Y92          LUT5 (Prop_lut5_I4_O)        0.150     2.241 r  display_instance/blue[0]_i_10/O
+                         net (fo=1, routed)           1.098     3.339    display_instance/blue[0]_i_10_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.328     3.667 r  display_instance/blue[0]_i_2/O
+                         net (fo=6, routed)           1.017     4.683    display_instance/blue[0]_i_2_n_0
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.510    38.514    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]/C
+                         clock pessimism              0.576    39.090    
+                         clock uncertainty           -0.098    38.993    
+    SLICE_X0Y99          FDRE (Setup_fdre_C_D)       -0.067    38.926    display_instance/blue_reg[0]
+  -------------------------------------------------------------------
+                         required time                         38.926    
+                         arrival time                          -4.683    
+  -------------------------------------------------------------------
+                         slack                                 34.242    
+
+Slack (MET) :             34.247ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/blue_reg[0]_lopt_replica_2/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.571ns  (logic 1.196ns (21.468%)  route 4.375ns (78.532%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.486ns = ( 38.514 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.887ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.625    -0.887    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.419    -0.468 f  display_instance/vcount_reg[7]/Q
+                         net (fo=12, routed)          1.058     0.590    display_instance/vcount_reg_n_0_[7]
+    SLICE_X2Y91          LUT6 (Prop_lut6_I4_O)        0.299     0.889 f  display_instance/blue[0]_i_20/O
+                         net (fo=1, routed)           1.202     2.091    display_instance/blue[0]_i_20_n_0
+    SLICE_X2Y92          LUT5 (Prop_lut5_I4_O)        0.150     2.241 r  display_instance/blue[0]_i_10/O
+                         net (fo=1, routed)           1.098     3.339    display_instance/blue[0]_i_10_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.328     3.667 r  display_instance/blue[0]_i_2/O
+                         net (fo=6, routed)           1.017     4.684    display_instance/blue[0]_i_2_n_0
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_2/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.510    38.514    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_2/C
+                         clock pessimism              0.576    39.090    
+                         clock uncertainty           -0.098    38.993    
+    SLICE_X0Y99          FDRE (Setup_fdre_C_D)       -0.061    38.932    display_instance/blue_reg[0]_lopt_replica_2
+  -------------------------------------------------------------------
+                         required time                         38.932    
+                         arrival time                          -4.684    
+  -------------------------------------------------------------------
+                         slack                                 34.247    
+
+Slack (MET) :             34.417ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/blue_reg[0]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.382ns  (logic 1.196ns (22.224%)  route 4.186ns (77.776%))
+  Logic Levels:           3  (LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.023ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.486ns = ( 38.514 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.887ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.625    -0.887    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.419    -0.468 f  display_instance/vcount_reg[7]/Q
+                         net (fo=12, routed)          1.058     0.590    display_instance/vcount_reg_n_0_[7]
+    SLICE_X2Y91          LUT6 (Prop_lut6_I4_O)        0.299     0.889 f  display_instance/blue[0]_i_20/O
+                         net (fo=1, routed)           1.202     2.091    display_instance/blue[0]_i_20_n_0
+    SLICE_X2Y92          LUT5 (Prop_lut5_I4_O)        0.150     2.241 r  display_instance/blue[0]_i_10/O
+                         net (fo=1, routed)           1.098     3.339    display_instance/blue[0]_i_10_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.328     3.667 r  display_instance/blue[0]_i_2/O
+                         net (fo=6, routed)           0.828     4.495    display_instance/blue[0]_i_2_n_0
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.510    38.514    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica/C
+                         clock pessimism              0.576    39.090    
+                         clock uncertainty           -0.098    38.993    
+    SLICE_X0Y99          FDRE (Setup_fdre_C_D)       -0.081    38.912    display_instance/blue_reg[0]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         38.912    
+                         arrival time                          -4.495    
+  -------------------------------------------------------------------
+                         slack                                 34.417    
+
+Slack (MET) :             34.632ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/red_reg[0]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.173ns  (logic 1.014ns (19.601%)  route 4.159ns (80.399%))
+  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.492ns = ( 38.508 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.886ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.626    -0.886    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.518    -0.368 f  display_instance/vcount_reg[3]/Q
+                         net (fo=13, routed)          1.211     0.843    display_instance/vcount_reg_n_0_[3]
+    SLICE_X3Y91          LUT4 (Prop_lut4_I0_O)        0.124     0.967 f  display_instance/vcount[8]_i_2/O
+                         net (fo=4, routed)           0.698     1.665    display_instance/vcount[8]_i_2_n_0
+    SLICE_X4Y92          LUT6 (Prop_lut6_I5_O)        0.124     1.789 f  display_instance/vcount[9]_i_4/O
+                         net (fo=2, routed)           0.444     2.233    display_instance/vcount[9]_i_4_n_0
+    SLICE_X4Y92          LUT2 (Prop_lut2_I1_O)        0.124     2.357 r  display_instance/blue[0]_i_4/O
+                         net (fo=3, routed)           0.498     2.856    display_instance/blue[0]_i_4_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I4_O)        0.124     2.980 r  display_instance/red[0]_i_1/O
+                         net (fo=7, routed)           1.308     4.287    display_instance/DE_internal0
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.504    38.508    display_instance/clk_25
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica/C
+                         clock pessimism              0.576    39.084    
+                         clock uncertainty           -0.098    38.987    
+    SLICE_X0Y85          FDRE (Setup_fdre_C_D)       -0.067    38.920    display_instance/red_reg[0]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         38.920    
+                         arrival time                          -4.287    
+  -------------------------------------------------------------------
+                         slack                                 34.632    
+
+Slack (MET) :             34.644ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/red_reg[0]_lopt_replica_4/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        5.170ns  (logic 1.014ns (19.612%)  route 4.156ns (80.388%))
+  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.492ns = ( 38.508 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.886ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.626    -0.886    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.518    -0.368 f  display_instance/vcount_reg[3]/Q
+                         net (fo=13, routed)          1.211     0.843    display_instance/vcount_reg_n_0_[3]
+    SLICE_X3Y91          LUT4 (Prop_lut4_I0_O)        0.124     0.967 f  display_instance/vcount[8]_i_2/O
+                         net (fo=4, routed)           0.698     1.665    display_instance/vcount[8]_i_2_n_0
+    SLICE_X4Y92          LUT6 (Prop_lut6_I5_O)        0.124     1.789 f  display_instance/vcount[9]_i_4/O
+                         net (fo=2, routed)           0.444     2.233    display_instance/vcount[9]_i_4_n_0
+    SLICE_X4Y92          LUT2 (Prop_lut2_I1_O)        0.124     2.357 r  display_instance/blue[0]_i_4/O
+                         net (fo=3, routed)           0.498     2.856    display_instance/blue[0]_i_4_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I4_O)        0.124     2.980 r  display_instance/red[0]_i_1/O
+                         net (fo=7, routed)           1.305     4.284    display_instance/DE_internal0
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica_4/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.504    38.508    display_instance/clk_25
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica_4/C
+                         clock pessimism              0.576    39.084    
+                         clock uncertainty           -0.098    38.987    
+    SLICE_X0Y85          FDRE (Setup_fdre_C_D)       -0.058    38.929    display_instance/red_reg[0]_lopt_replica_4
+  -------------------------------------------------------------------
+                         required time                         38.929    
+                         arrival time                          -4.284    
+  -------------------------------------------------------------------
+                         slack                                 34.644    
+
+Slack (MET) :             34.827ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/red_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        4.978ns  (logic 1.014ns (20.369%)  route 3.964ns (79.631%))
+  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.492ns = ( 38.508 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.886ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.626    -0.886    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.518    -0.368 f  display_instance/vcount_reg[3]/Q
+                         net (fo=13, routed)          1.211     0.843    display_instance/vcount_reg_n_0_[3]
+    SLICE_X3Y91          LUT4 (Prop_lut4_I0_O)        0.124     0.967 f  display_instance/vcount[8]_i_2/O
+                         net (fo=4, routed)           0.698     1.665    display_instance/vcount[8]_i_2_n_0
+    SLICE_X4Y92          LUT6 (Prop_lut6_I5_O)        0.124     1.789 f  display_instance/vcount[9]_i_4/O
+                         net (fo=2, routed)           0.444     2.233    display_instance/vcount[9]_i_4_n_0
+    SLICE_X4Y92          LUT2 (Prop_lut2_I1_O)        0.124     2.357 r  display_instance/blue[0]_i_4/O
+                         net (fo=3, routed)           0.498     2.856    display_instance/blue[0]_i_4_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I4_O)        0.124     2.980 r  display_instance/red[0]_i_1/O
+                         net (fo=7, routed)           1.113     4.092    display_instance/DE_internal0
+    SLICE_X1Y85          FDRE                                         r  display_instance/red_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.504    38.508    display_instance/clk_25
+    SLICE_X1Y85          FDRE                                         r  display_instance/red_reg[0]/C
+                         clock pessimism              0.576    39.084    
+                         clock uncertainty           -0.098    38.987    
+    SLICE_X1Y85          FDRE (Setup_fdre_C_D)       -0.067    38.920    display_instance/red_reg[0]
+  -------------------------------------------------------------------
+                         required time                         38.920    
+                         arrival time                          -4.092    
+  -------------------------------------------------------------------
+                         slack                                 34.827    
+
+Slack (MET) :             34.831ns  (required time - arrival time)
+  Source:                 display_instance/vcount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/blue_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_25_clkDVIprescaler rise@40.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        4.618ns  (logic 1.014ns (21.956%)  route 3.604ns (78.044%))
+  Logic Levels:           4  (LUT2=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.486ns = ( 38.514 - 40.000 ) 
+    Source Clock Delay      (SCD):    -0.886ns
+    Clock Pessimism Removal (CPR):    0.576ns
+  Clock Uncertainty:      0.098ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.626    -0.886    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.518    -0.368 r  display_instance/vcount_reg[3]/Q
+                         net (fo=13, routed)          1.211     0.843    display_instance/vcount_reg_n_0_[3]
+    SLICE_X3Y91          LUT4 (Prop_lut4_I0_O)        0.124     0.967 r  display_instance/vcount[8]_i_2/O
+                         net (fo=4, routed)           0.698     1.665    display_instance/vcount[8]_i_2_n_0
+    SLICE_X4Y92          LUT6 (Prop_lut6_I5_O)        0.124     1.789 r  display_instance/vcount[9]_i_4/O
+                         net (fo=2, routed)           0.444     2.233    display_instance/vcount[9]_i_4_n_0
+    SLICE_X4Y92          LUT2 (Prop_lut2_I1_O)        0.124     2.357 f  display_instance/blue[0]_i_4/O
+                         net (fo=3, routed)           0.489     2.847    display_instance/blue[0]_i_4_n_0
+    SLICE_X2Y94          LUT6 (Prop_lut6_I1_O)        0.124     2.971 r  display_instance/blue[0]_i_1/O
+                         net (fo=4, routed)           0.762     3.732    display_instance/blue[0]_i_1_n_0
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                     40.000    40.000 r  
+    W5                                                0.000    40.000 r  clk100 (IN)
+                         net (fo=0)                   0.000    40.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162    42.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.332 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.914    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    37.005 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.510    38.514    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]/C
+                         clock pessimism              0.576    39.090    
+                         clock uncertainty           -0.098    38.993    
+    SLICE_X0Y99          FDRE (Setup_fdre_C_R)       -0.429    38.564    display_instance/blue_reg[0]
+  -------------------------------------------------------------------
+                         required time                         38.564    
+                         arrival time                          -3.732    
+  -------------------------------------------------------------------
+                         slack                                 34.831    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.213ns  (arrival time - required time)
+  Source:                 display_instance/vcount_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/vcount_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.334ns  (logic 0.246ns (73.561%)  route 0.088ns (26.439%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.826ns
+    Source Clock Delay      (SCD):    -0.588ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.593    -0.588    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.148    -0.440 r  display_instance/vcount_reg[1]/Q
+                         net (fo=10, routed)          0.088    -0.352    display_instance/vcount_reg_n_0_[1]
+    SLICE_X2Y93          LUT6 (Prop_lut6_I5_O)        0.098    -0.254 r  display_instance/vcount[3]_i_1/O
+                         net (fo=1, routed)           0.000    -0.254    display_instance/vcount[3]_i_1_n_0
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.863    -0.826    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[3]/C
+                         clock pessimism              0.238    -0.588    
+    SLICE_X2Y93          FDRE (Hold_fdre_C_D)         0.121    -0.467    display_instance/vcount_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.467    
+                         arrival time                          -0.254    
+  -------------------------------------------------------------------
+                         slack                                  0.213    
+
+Slack (MET) :             0.227ns  (arrival time - required time)
+  Source:                 display_instance/hcount_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/hcount_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.335ns  (logic 0.186ns (55.538%)  route 0.149ns (44.462%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.828ns
+    Source Clock Delay      (SCD):    -0.590ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.591    -0.590    display_instance/clk_25
+    SLICE_X4Y94          FDRE                                         r  display_instance/hcount_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y94          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  display_instance/hcount_reg[2]/Q
+                         net (fo=11, routed)          0.149    -0.300    display_instance/hcount_reg_n_0_[2]
+    SLICE_X5Y93          LUT6 (Prop_lut6_I5_O)        0.045    -0.255 r  display_instance/hcount[5]_i_1/O
+                         net (fo=1, routed)           0.000    -0.255    display_instance/hcount[5]_i_1_n_0
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.861    -0.828    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[5]/C
+                         clock pessimism              0.254    -0.574    
+    SLICE_X5Y93          FDRE (Hold_fdre_C_D)         0.092    -0.482    display_instance/hcount_reg[5]
+  -------------------------------------------------------------------
+                         required time                          0.482    
+                         arrival time                          -0.255    
+  -------------------------------------------------------------------
+                         slack                                  0.227    
+
+Slack (MET) :             0.239ns  (arrival time - required time)
+  Source:                 display_instance/vcount_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/vcount_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.331ns  (logic 0.186ns (56.235%)  route 0.145ns (43.765%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.827ns
+    Source Clock Delay      (SCD):    -0.589ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.592    -0.589    display_instance/clk_25
+    SLICE_X3Y91          FDRE                                         r  display_instance/vcount_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y91          FDRE (Prop_fdre_C_Q)         0.141    -0.448 r  display_instance/vcount_reg[8]/Q
+                         net (fo=10, routed)          0.145    -0.304    display_instance/vcount_reg_n_0_[8]
+    SLICE_X3Y91          LUT6 (Prop_lut6_I5_O)        0.045    -0.259 r  display_instance/vcount[8]_i_1/O
+                         net (fo=1, routed)           0.000    -0.259    display_instance/vcount[8]_i_1_n_0
+    SLICE_X3Y91          FDRE                                         r  display_instance/vcount_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.862    -0.827    display_instance/clk_25
+    SLICE_X3Y91          FDRE                                         r  display_instance/vcount_reg[8]/C
+                         clock pessimism              0.238    -0.589    
+    SLICE_X3Y91          FDRE (Hold_fdre_C_D)         0.092    -0.497    display_instance/vcount_reg[8]
+  -------------------------------------------------------------------
+                         required time                          0.497    
+                         arrival time                          -0.259    
+  -------------------------------------------------------------------
+                         slack                                  0.239    
+
+Slack (MET) :             0.242ns  (arrival time - required time)
+  Source:                 display_instance/hcount_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/hcount_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.350ns  (logic 0.186ns (53.079%)  route 0.164ns (46.921%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.828ns
+    Source Clock Delay      (SCD):    -0.590ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.591    -0.590    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y93          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  display_instance/hcount_reg[6]/Q
+                         net (fo=14, routed)          0.164    -0.285    display_instance/hcount_reg_n_0_[6]
+    SLICE_X5Y94          LUT6 (Prop_lut6_I3_O)        0.045    -0.240 r  display_instance/hcount[9]_i_2/O
+                         net (fo=1, routed)           0.000    -0.240    display_instance/plusOp[9]
+    SLICE_X5Y94          FDRE                                         r  display_instance/hcount_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.861    -0.828    display_instance/clk_25
+    SLICE_X5Y94          FDRE                                         r  display_instance/hcount_reg[9]/C
+                         clock pessimism              0.254    -0.574    
+    SLICE_X5Y94          FDRE (Hold_fdre_C_D)         0.092    -0.482    display_instance/hcount_reg[9]
+  -------------------------------------------------------------------
+                         required time                          0.482    
+                         arrival time                          -0.240    
+  -------------------------------------------------------------------
+                         slack                                  0.242    
+
+Slack (MET) :             0.250ns  (arrival time - required time)
+  Source:                 display_instance/hcount_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/hcount_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.342ns  (logic 0.186ns (54.349%)  route 0.156ns (45.651%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.828ns
+    Source Clock Delay      (SCD):    -0.590ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.591    -0.590    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y93          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  display_instance/hcount_reg[6]/Q
+                         net (fo=14, routed)          0.156    -0.293    display_instance/hcount_reg_n_0_[6]
+    SLICE_X5Y93          LUT4 (Prop_lut4_I2_O)        0.045    -0.248 r  display_instance/hcount[6]_i_1/O
+                         net (fo=1, routed)           0.000    -0.248    display_instance/plusOp[6]
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.861    -0.828    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[6]/C
+                         clock pessimism              0.238    -0.590    
+    SLICE_X5Y93          FDRE (Hold_fdre_C_D)         0.092    -0.498    display_instance/hcount_reg[6]
+  -------------------------------------------------------------------
+                         required time                          0.498    
+                         arrival time                          -0.248    
+  -------------------------------------------------------------------
+                         slack                                  0.250    
+
+Slack (MET) :             0.258ns  (arrival time - required time)
+  Source:                 display_instance/hcount_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/hcount_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.365ns  (logic 0.186ns (50.893%)  route 0.179ns (49.107%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.828ns
+    Source Clock Delay      (SCD):    -0.590ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.591    -0.590    display_instance/clk_25
+    SLICE_X4Y95          FDRE                                         r  display_instance/hcount_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y95          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  display_instance/hcount_reg[0]/Q
+                         net (fo=10, routed)          0.179    -0.270    display_instance/hcount_reg_n_0_[0]
+    SLICE_X5Y93          LUT4 (Prop_lut4_I2_O)        0.045    -0.225 r  display_instance/hcount[3]_i_1/O
+                         net (fo=1, routed)           0.000    -0.225    display_instance/plusOp[3]
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.861    -0.828    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[3]/C
+                         clock pessimism              0.254    -0.574    
+    SLICE_X5Y93          FDRE (Hold_fdre_C_D)         0.091    -0.483    display_instance/hcount_reg[3]
+  -------------------------------------------------------------------
+                         required time                          0.483    
+                         arrival time                          -0.225    
+  -------------------------------------------------------------------
+                         slack                                  0.258    
+
+Slack (MET) :             0.269ns  (arrival time - required time)
+  Source:                 display_instance/hcount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/hcount_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.376ns  (logic 0.186ns (49.526%)  route 0.190ns (50.474%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.828ns
+    Source Clock Delay      (SCD):    -0.590ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.591    -0.590    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y93          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  display_instance/hcount_reg[3]/Q
+                         net (fo=10, routed)          0.190    -0.260    display_instance/hcount_reg_n_0_[3]
+    SLICE_X5Y94          LUT5 (Prop_lut5_I2_O)        0.045    -0.215 r  display_instance/hcount[4]_i_1/O
+                         net (fo=1, routed)           0.000    -0.215    display_instance/hcount[4]_i_1_n_0
+    SLICE_X5Y94          FDRE                                         r  display_instance/hcount_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.861    -0.828    display_instance/clk_25
+    SLICE_X5Y94          FDRE                                         r  display_instance/hcount_reg[4]/C
+                         clock pessimism              0.254    -0.574    
+    SLICE_X5Y94          FDRE (Hold_fdre_C_D)         0.091    -0.483    display_instance/hcount_reg[4]
+  -------------------------------------------------------------------
+                         required time                          0.483    
+                         arrival time                          -0.215    
+  -------------------------------------------------------------------
+                         slack                                  0.269    
+
+Slack (MET) :             0.274ns  (arrival time - required time)
+  Source:                 display_instance/vcount_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/vcount_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.405ns  (logic 0.207ns (51.051%)  route 0.198ns (48.949%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.826ns
+    Source Clock Delay      (SCD):    -0.588ns
+    Clock Pessimism Removal (CPR):    -0.238ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.593    -0.588    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.164    -0.424 r  display_instance/vcount_reg[0]/Q
+                         net (fo=10, routed)          0.198    -0.226    display_instance/vcount_reg_n_0_[0]
+    SLICE_X2Y93          LUT5 (Prop_lut5_I1_O)        0.043    -0.183 r  display_instance/vcount[1]_i_1/O
+                         net (fo=1, routed)           0.000    -0.183    display_instance/vcount[1]_i_1_n_0
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.863    -0.826    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[1]/C
+                         clock pessimism              0.238    -0.588    
+    SLICE_X2Y93          FDRE (Hold_fdre_C_D)         0.131    -0.457    display_instance/vcount_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.457    
+                         arrival time                          -0.183    
+  -------------------------------------------------------------------
+                         slack                                  0.274    
+
+Slack (MET) :             0.283ns  (arrival time - required time)
+  Source:                 display_instance/vcount_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/vcount_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.389ns  (logic 0.209ns (53.674%)  route 0.180ns (46.326%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.827ns
+    Source Clock Delay      (SCD):    -0.588ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.593    -0.588    display_instance/clk_25
+    SLICE_X2Y93          FDRE                                         r  display_instance/vcount_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          FDRE (Prop_fdre_C_Q)         0.164    -0.424 r  display_instance/vcount_reg[0]/Q
+                         net (fo=10, routed)          0.180    -0.244    display_instance/vcount_reg_n_0_[0]
+    SLICE_X3Y92          LUT6 (Prop_lut6_I4_O)        0.045    -0.199 r  display_instance/vcount[5]_i_1/O
+                         net (fo=1, routed)           0.000    -0.199    display_instance/vcount[5]_i_1_n_0
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.862    -0.827    display_instance/clk_25
+    SLICE_X3Y92          FDRE                                         r  display_instance/vcount_reg[5]/C
+                         clock pessimism              0.254    -0.573    
+    SLICE_X3Y92          FDRE (Hold_fdre_C_D)         0.091    -0.482    display_instance/vcount_reg[5]
+  -------------------------------------------------------------------
+                         required time                          0.482    
+                         arrival time                          -0.199    
+  -------------------------------------------------------------------
+                         slack                                  0.283    
+
+Slack (MET) :             0.287ns  (arrival time - required time)
+  Source:                 display_instance/hcount_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            display_instance/hcount_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_25_clkDVIprescaler
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_25_clkDVIprescaler rise@0.000ns - clk_25_clkDVIprescaler rise@0.000ns)
+  Data Path Delay:        0.391ns  (logic 0.186ns (47.614%)  route 0.205ns (52.386%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.828ns
+    Source Clock Delay      (SCD):    -0.590ns
+    Clock Pessimism Removal (CPR):    -0.251ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.591    -0.590    display_instance/clk_25
+    SLICE_X5Y93          FDRE                                         r  display_instance/hcount_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y93          FDRE (Prop_fdre_C_Q)         0.141    -0.449 r  display_instance/hcount_reg[5]/Q
+                         net (fo=16, routed)          0.205    -0.245    display_instance/hcount_reg_n_0_[5]
+    SLICE_X4Y93          LUT5 (Prop_lut5_I2_O)        0.045    -0.200 r  display_instance/hcount[7]_i_1/O
+                         net (fo=1, routed)           0.000    -0.200    display_instance/plusOp[7]
+    SLICE_X4Y93          FDRE                                         r  display_instance/hcount_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     0.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.861    -0.828    display_instance/clk_25
+    SLICE_X4Y93          FDRE                                         r  display_instance/hcount_reg[7]/C
+                         clock pessimism              0.251    -0.577    
+    SLICE_X4Y93          FDRE (Hold_fdre_C_D)         0.091    -0.486    display_instance/hcount_reg[7]
+  -------------------------------------------------------------------
+                         required time                          0.486    
+                         arrival time                          -0.200    
+  -------------------------------------------------------------------
+                         slack                                  0.287    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_25_clkDVIprescaler
+Waveform(ns):       { 0.000 20.000 }
+Period(ns):         40.000
+Sources:            { prescaler_instance/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         40.000      37.845     BUFGCTRL_X0Y0    prescaler_instance/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         40.000      38.751     MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y99      display_instance/blue_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_2/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_3/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y100     display_instance/green_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y100     display_instance/green_reg[2]_lopt_replica/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y94      display_instance/green_reg[3]/C
+Min Period        n/a     FDRE/C              n/a            1.000         40.000      39.000     SLICE_X0Y94      display_instance/green_reg[3]_lopt_replica/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       40.000      173.360    MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_2/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_2/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_3/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_3/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y100     display_instance/green_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y100     display_instance/green_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_2/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_2/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_3/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y99      display_instance/blue_reg[0]_lopt_replica_3/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y100     display_instance/green_reg[2]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         20.000      19.500     SLICE_X0Y100     display_instance/green_reg[2]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_clkDVIprescaler
+  To Clock:  clkfbout_clkDVIprescaler
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_clkDVIprescaler
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1    prescaler_instance/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       10.000      203.360    MMCME2_ADV_X1Y0  prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clk_25_clkDVIprescaler
+  To Clock:  
+
+Max Delay            16 Endpoints
+Min Delay            16 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                            (clock source 'clk_25_clkDVIprescaler'  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            clk_out
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.192ns  (logic 3.604ns (43.990%)  route 4.589ns (56.010%))
+  Logic Levels:           2  (BUFG=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler fall edge)
+                                                     20.000    20.000 f  
+    W5                                                0.000    20.000 f  clk100 (IN)
+                         net (fo=0)                   0.000    20.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458    21.458 f  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233    22.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    15.731 f  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    17.392    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    17.488 f  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          2.927    20.415    clk_out_OBUF
+    M18                  OBUF (Prop_obuf_I_O)         3.508    23.923 f  clk_out_OBUF_inst/O
+                         net (fo=0)                   0.000    23.923    clk_out
+    M18                                                               f  clk_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/vsync_internal_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            vsync
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.946ns  (logic 3.956ns (49.790%)  route 3.990ns (50.210%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.624    -0.888    display_instance/clk_25
+    SLICE_X0Y89          FDRE                                         r  display_instance/vsync_internal_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y89          FDRE (Prop_fdre_C_Q)         0.456    -0.432 r  display_instance/vsync_internal_reg/Q
+                         net (fo=1, routed)           3.990     3.558    vsync_OBUF
+    R18                  OBUF (Prop_obuf_I_O)         3.500     7.058 r  vsync_OBUF_inst/O
+                         net (fo=0)                   0.000     7.058    vsync
+    R18                                                               r  vsync (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/red_reg[0]_lopt_replica_4/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.896ns  (logic 3.948ns (50.004%)  route 3.948ns (49.996%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.621    -0.891    display_instance/clk_25
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica_4/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y85          FDRE (Prop_fdre_C_Q)         0.456    -0.435 r  display_instance/red_reg[0]_lopt_replica_4/Q
+                         net (fo=1, routed)           3.948     3.513    lopt_3
+    N17                  OBUF (Prop_obuf_I_O)         3.492     7.005 r  rgb_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     7.005    rgb[8]
+    N17                                                               r  rgb[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/red_reg[0]_lopt_replica_3/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.743ns  (logic 3.993ns (51.570%)  route 3.750ns (48.430%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.621    -0.891    display_instance/clk_25
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica_3/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y85          FDRE (Prop_fdre_C_Q)         0.456    -0.435 r  display_instance/red_reg[0]_lopt_replica_3/Q
+                         net (fo=1, routed)           3.750     3.315    lopt_2
+    K17                  OBUF (Prop_obuf_I_O)         3.537     6.852 r  rgb_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     6.852    rgb[11]
+    K17                                                               r  rgb[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/red_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[9]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.716ns  (logic 3.975ns (51.514%)  route 3.741ns (48.486%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.621    -0.891    display_instance/clk_25
+    SLICE_X1Y85          FDRE                                         r  display_instance/red_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y85          FDRE (Prop_fdre_C_Q)         0.456    -0.435 r  display_instance/red_reg[0]/Q
+                         net (fo=1, routed)           3.741     3.306    DE_OBUF
+    M19                  OBUF (Prop_obuf_I_O)         3.519     6.825 r  rgb_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     6.825    rgb[9]
+    M19                                                               r  rgb[9] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/red_reg[0]_lopt_replica_2/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.577ns  (logic 3.987ns (52.617%)  route 3.590ns (47.383%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.621    -0.891    display_instance/clk_25
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y85          FDRE (Prop_fdre_C_Q)         0.456    -0.435 r  display_instance/red_reg[0]_lopt_replica_2/Q
+                         net (fo=1, routed)           3.590     3.155    lopt_1
+    L17                  OBUF (Prop_obuf_I_O)         3.531     6.686 r  rgb_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     6.686    rgb[10]
+    L17                                                               r  rgb[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/red_reg[0]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            DE
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.405ns  (logic 3.953ns (53.376%)  route 3.453ns (46.624%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.621    -0.891    display_instance/clk_25
+    SLICE_X0Y85          FDRE                                         r  display_instance/red_reg[0]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y85          FDRE (Prop_fdre_C_Q)         0.456    -0.435 r  display_instance/red_reg[0]_lopt_replica/Q
+                         net (fo=1, routed)           3.453     3.018    lopt
+    P17                  OBUF (Prop_obuf_I_O)         3.497     6.514 r  DE_OBUF_inst/O
+                         net (fo=0)                   0.000     6.514    DE
+    P17                                                               r  DE (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/hsync_internal_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            hsync
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.218ns  (logic 3.970ns (55.002%)  route 3.248ns (44.998%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.622    -0.890    display_instance/clk_25
+    SLICE_X4Y92          FDRE                                         r  display_instance/hsync_internal_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y92          FDRE (Prop_fdre_C_Q)         0.456    -0.434 r  display_instance/hsync_internal_reg/Q
+                         net (fo=1, routed)           3.248     2.814    hsync_OBUF
+    P18                  OBUF (Prop_obuf_I_O)         3.514     6.328 r  hsync_OBUF_inst/O
+                         net (fo=0)                   0.000     6.328    hsync
+    P18                                                               r  hsync (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/blue_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.823ns  (logic 3.976ns (58.274%)  route 2.847ns (41.726%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.627    -0.885    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDRE (Prop_fdre_C_Q)         0.456    -0.429 r  display_instance/blue_reg[0]/Q
+                         net (fo=1, routed)           2.847     2.418    rgb_OBUF[0]
+    A14                  OBUF (Prop_obuf_I_O)         3.520     5.938 r  rgb_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     5.938    rgb[3]
+    A14                                                               r  rgb[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/blue_reg[0]_lopt_replica_3/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.747ns  (logic 3.959ns (58.678%)  route 2.788ns (41.322%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.233     2.691    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          1.627    -0.885    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_3/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDRE (Prop_fdre_C_Q)         0.456    -0.429 r  display_instance/blue_reg[0]_lopt_replica_3/Q
+                         net (fo=1, routed)           2.788     2.359    lopt_7
+    A15                  OBUF (Prop_obuf_I_O)         3.503     5.862 r  rgb_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     5.862    rgb[2]
+    A15                                                               r  rgb[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                            (clock source 'clk_25_clkDVIprescaler'  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            clk_out
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.460ns  (logic 1.235ns (50.196%)  route 1.225ns (49.804%))
+  Logic Levels:           2  (BUFG=1 OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.739    -0.442    clk_out_OBUF
+    M18                  OBUF (Prop_obuf_I_O)         1.209     0.767 r  clk_out_OBUF_inst/O
+                         net (fo=0)                   0.000     0.767    clk_out
+    M18                                                               r  clk_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/green_reg[3]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.031ns  (logic 1.345ns (66.237%)  route 0.686ns (33.763%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.593    -0.588    display_instance/clk_25
+    SLICE_X0Y94          FDRE                                         r  display_instance/green_reg[3]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y94          FDRE (Prop_fdre_C_Q)         0.141    -0.447 r  display_instance/green_reg[3]_lopt_replica/Q
+                         net (fo=1, routed)           0.686     0.238    lopt_11
+    B16                  OBUF (Prop_obuf_I_O)         1.204     1.443 r  rgb_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     1.443    rgb[5]
+    B16                                                               r  rgb[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/green_reg[2]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.948ns  (logic 1.334ns (68.516%)  route 0.613ns (31.484%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.676    -0.505    display_instance/clk_25
+    SLICE_X0Y100         FDRE                                         r  display_instance/green_reg[2]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.141    -0.364 r  display_instance/green_reg[2]_lopt_replica/Q
+                         net (fo=1, routed)           0.613     0.249    lopt_9
+    C16                  OBUF (Prop_obuf_I_O)         1.193     1.443 r  rgb_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     1.443    rgb[4]
+    C16                                                               r  rgb[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/green_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        1.954ns  (logic 1.347ns (68.935%)  route 0.607ns (31.065%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.676    -0.505    display_instance/clk_25
+    SLICE_X0Y100         FDRE                                         r  display_instance/green_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.141    -0.364 r  display_instance/green_reg[2]/Q
+                         net (fo=1, routed)           0.607     0.243    rgb_OBUF[4]
+    C15                  OBUF (Prop_obuf_I_O)         1.206     1.449 r  rgb_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     1.449    rgb[6]
+    C15                                                               r  rgb[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/blue_reg[0]_lopt_replica/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.056ns  (logic 1.350ns (65.679%)  route 0.705ns (34.321%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.594    -0.587    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDRE (Prop_fdre_C_Q)         0.141    -0.446 r  display_instance/blue_reg[0]_lopt_replica/Q
+                         net (fo=1, routed)           0.705     0.259    lopt_5
+    A17                  OBUF (Prop_obuf_I_O)         1.209     1.468 r  rgb_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     1.468    rgb[0]
+    A17                                                               r  rgb[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/blue_reg[0]_lopt_replica_2/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.087ns  (logic 1.354ns (64.858%)  route 0.734ns (35.142%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.594    -0.587    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_2/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDRE (Prop_fdre_C_Q)         0.141    -0.446 r  display_instance/blue_reg[0]_lopt_replica_2/Q
+                         net (fo=1, routed)           0.734     0.287    lopt_6
+    A16                  OBUF (Prop_obuf_I_O)         1.213     1.500 r  rgb_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     1.500    rgb[1]
+    A16                                                               r  rgb[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/green_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.118ns  (logic 1.367ns (64.534%)  route 0.751ns (35.466%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.593    -0.588    display_instance/clk_25
+    SLICE_X0Y94          FDRE                                         r  display_instance/green_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y94          FDRE (Prop_fdre_C_Q)         0.141    -0.447 r  display_instance/green_reg[3]/Q
+                         net (fo=1, routed)           0.751     0.304    rgb_OBUF[5]
+    B15                  OBUF (Prop_obuf_I_O)         1.226     1.530 r  rgb_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     1.530    rgb[7]
+    B15                                                               r  rgb[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/blue_reg[0]_lopt_replica_3/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.143ns  (logic 1.345ns (62.766%)  route 0.798ns (37.234%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.594    -0.587    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]_lopt_replica_3/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDRE (Prop_fdre_C_Q)         0.141    -0.446 r  display_instance/blue_reg[0]_lopt_replica_3/Q
+                         net (fo=1, routed)           0.798     0.352    lopt_7
+    A15                  OBUF (Prop_obuf_I_O)         1.204     1.556 r  rgb_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     1.556    rgb[2]
+    A15                                                               r  rgb[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/blue_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            rgb[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.196ns  (logic 1.362ns (62.023%)  route 0.834ns (37.977%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.594    -0.587    display_instance/clk_25
+    SLICE_X0Y99          FDRE                                         r  display_instance/blue_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDRE (Prop_fdre_C_Q)         0.141    -0.446 r  display_instance/blue_reg[0]/Q
+                         net (fo=1, routed)           0.834     0.388    rgb_OBUF[0]
+    A14                  OBUF (Prop_obuf_I_O)         1.221     1.609 r  rgb_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     1.609    rgb[3]
+    A14                                                               r  rgb[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 display_instance/hsync_internal_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_25_clkDVIprescaler  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            hsync
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.319ns  (logic 1.356ns (58.477%)  route 0.963ns (41.523%))
+  Logic Levels:           1  (OBUF=1)
+  Clock Uncertainty:      0.199ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.182ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_25_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.440     0.667    prescaler_instance/inst/clk_100_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  prescaler_instance/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    prescaler_instance/inst/clk_25_clkDVIprescaler
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  prescaler_instance/inst/clkout1_buf/O
+                         net (fo=36, routed)          0.590    -0.591    display_instance/clk_25
+    SLICE_X4Y92          FDRE                                         r  display_instance/hsync_internal_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y92          FDRE (Prop_fdre_C_Q)         0.141    -0.450 r  display_instance/hsync_internal_reg/Q
+                         net (fo=1, routed)           0.963     0.513    hsync_OBUF
+    P18                  OBUF (Prop_obuf_I_O)         1.215     1.728 r  hsync_OBUF_inst/O
+                         net (fo=0)                   0.000     1.728    hsync
+    P18                                                               r  hsync (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clkfbout_clkDVIprescaler
+  To Clock:  
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT
+                            (clock source 'clkfbout_clkDVIprescaler'  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            prescaler_instance/inst/mmcm_adv_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Max at Fast Process Corner
+  Data Path Delay:        1.375ns  (logic 0.029ns (2.109%)  route 1.346ns (97.891%))
+  Logic Levels:           1  (BUFG=1)
+  Clock Uncertainty:      0.156ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.090ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout_clkDVIprescaler fall edge)
+                                                      5.000     5.000 f  
+    W5                                                0.000     5.000 f  clk100 (IN)
+                         net (fo=0)                   0.000     5.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     5.414 f  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           0.480     5.894    prescaler_instance/inst/clk_100_clkDVIprescaler
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.142     2.752 f  prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT
+                         net (fo=1, routed)           0.530     3.282    prescaler_instance/inst/clkfbout_clkDVIprescaler
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     3.311 f  prescaler_instance/inst/clkf_buf/O
+                         net (fo=1, routed)           0.817     4.127    prescaler_instance/inst/clkfbout_buf_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV                                   f  prescaler_instance/inst/mmcm_adv_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT
+                            (clock source 'clkfbout_clkDVIprescaler'  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            prescaler_instance/inst/mmcm_adv_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Min at Slow Process Corner
+  Data Path Delay:        3.129ns  (logic 0.091ns (2.908%)  route 3.038ns (97.092%))
+  Logic Levels:           1  (BUFG=1)
+  Clock Uncertainty:      0.156ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.090ns
+    Phase Error              (PE):    0.104ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout_clkDVIprescaler rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk100 (IN)
+                         net (fo=0)                   0.000     0.000    prescaler_instance/inst/clk_100
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  prescaler_instance/inst/clkin1_ibufg/O
+                         net (fo=1, routed)           1.162     2.550    prescaler_instance/inst/clk_100_clkDVIprescaler
+  -------------------------------------------------------------------    -------------------
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -7.217    -4.668 r  prescaler_instance/inst/mmcm_adv_inst/CLKFBOUT
+                         net (fo=1, routed)           1.581    -3.086    prescaler_instance/inst/clkfbout_clkDVIprescaler
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -2.995 r  prescaler_instance/inst/clkf_buf/O
+                         net (fo=1, routed)           1.457    -1.538    prescaler_instance/inst/clkfbout_buf_clkDVIprescaler
+    MMCME2_ADV_X1Y0      MMCME2_ADV                                   r  prescaler_instance/inst/mmcm_adv_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
