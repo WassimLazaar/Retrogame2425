@@ -1,0 +1,85 @@
+/ {
+    gpio_keys {
+        compatible = "gpio-keys";
+
+        /* Joystick 1 */
+        j1upbtn: j1up {
+            gpios = <&gpioc 0 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 1 UP";
+        };
+        j1downbtn: j1down {
+            gpios = <&gpioc 1 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 1 DOWN";
+        };
+        j1leftbtn: j1left {
+            gpios = <&gpiob 0 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 1 LEFT";
+        };
+        j1rightbtn: j1right {
+            gpios = <&gpioa 4 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 1 RIGHT";
+        };
+
+        /* Joystick 2 */
+        j2upbtn: j2up {
+            gpios = <&gpiob 13 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 2 UP";
+        };
+        j2downbtn: j2down {
+            gpios = <&gpiob 14 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 2 DOWN";
+        };
+        j2leftbtn: j2left {
+            gpios = <&gpiob 15 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 2 LEFT";
+        };
+        j2rightbtn: j2right {
+            gpios = <&gpiob 1 GPIO_ACTIVE_HIGH>;
+            label = "Joystick 2 RIGHT";
+        };
+
+        /* Buttons */
+        btn1btn: btn1 {
+            gpios = <&gpiob 11 GPIO_ACTIVE_HIGH>;
+            label = "Button 1";
+        };
+        btn2btn: btn2 {
+            gpios = <&gpiob 12 GPIO_ACTIVE_HIGH>;
+            label = "Button 2";
+        };
+        btn3btn: btn3 {
+            gpios = <&gpioa 11 GPIO_ACTIVE_HIGH>;
+            label = "Button 3";
+        };
+        btn4btn: btn4 {
+            gpios = <&gpioa 12 GPIO_ACTIVE_HIGH>;
+            label = "Button 4";
+        };
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        greenled: led {
+            gpios = <&gpioa 5 GPIO_ACTIVE_HIGH>;
+            label = "Green LED";
+        };
+    };
+
+    aliases {
+        led = &greenled;
+        j1up = &j1upbtn;
+        j1down = &j1downbtn;
+        j1left = &j1leftbtn;
+        j1right = &j1rightbtn;
+
+        j2up = &j2upbtn;
+        j2down = &j2downbtn;
+        j2left = &j2leftbtn;
+        j2right = &j2rightbtn;
+
+        btn1 = &btn1btn;
+        btn2 = &btn2btn;
+        btn3 = &btn3btn;
+        btn4 = &btn4btn;
+    };
+};
