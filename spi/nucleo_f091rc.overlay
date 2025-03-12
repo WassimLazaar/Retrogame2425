@@ -1,0 +1,114 @@
+/ {
+	chosen {
+		zephyr,spi = &spi1;
+	};
+
+   
+
+    gpio_keys {
+		compatible = "gpio-keys";
+		move_right_btn1: button0 {
+			label = "User";
+			gpios = <&gpioa 4 (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        move_left_btn1: button1 {
+			label = "User";
+			gpios = <&gpiob 0  (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        jump_btn1: button2 {
+			label = "User";
+			gpios = <&gpioc 0  (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        move_down_btn1: button3 {
+			label = "User";
+			gpios = <&gpioc 1 (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        shoot_btn1: button4 {
+			label = "User";
+			gpios = <&gpiob 11 GPIO_ACTIVE_HIGH>;
+			zephyr,code = <INPUT_KEY_0>;
+        };
+
+         reload_btn1: button5 {
+                label = "User";
+                gpios = <&gpiob 12 GPIO_ACTIVE_HIGH>;
+                zephyr,code = <INPUT_KEY_0>;
+         };
+
+         ///////
+         
+
+
+         move_right_btn2: button6 {
+			label = "User";
+			gpios = <&gpiob 1 (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        move_left_btn2: button7 {
+			label = "User";
+			gpios = <&gpiob 15 (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        jump_btn2: button8 {
+			label = "User";
+			gpios = <&gpiob 13 (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        move_down_btn2: button9 {
+			label = "User";
+			gpios = <&gpiob 14 (GPIO_ACTIVE_HIGH)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+
+        shoot_btn2: button10 {
+			label = "User";
+			gpios = <&gpioa 11 GPIO_ACTIVE_HIGH>;
+			zephyr,code = <INPUT_KEY_0>;
+        };
+
+         reload_btn2: button11 {
+                label = "User";
+                gpios = <&gpioa 12  GPIO_ACTIVE_HIGH>;
+                zephyr,code = <INPUT_KEY_0>;
+         };
+	};
+
+    aliases {
+        
+        
+        spi1 = &spi1;
+
+        right1  = &move_right_btn1;
+        left1  =  &move_left_btn1;       
+        down1 = &move_down_btn1;
+        jump1  = &jump_btn1;
+        shoot1 = &shoot_btn1;
+        reload1 = &reload_btn1;
+        
+
+        right2  = &move_right_btn2;
+        left2  =  &move_left_btn2;       
+        down2 = &move_down_btn2;
+        jump2  = &jump_btn2;
+        shoot2 = &shoot_btn2;
+        reload2 = &reload_btn2;
+	};
+};
+
+&spi1 {
+	pinctrl-0 = <&spi1_sck_pa5 &spi1_miso_pa6 &spi1_mosi_pa7>;
+	pinctrl-names = "default";
+	status = "okay";
+    cs-gpios = <&gpiob 6 GPIO_ACTIVE_LOW>;
+};
