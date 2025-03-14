@@ -8,37 +8,37 @@
     gpio_keys {
 		compatible = "gpio-keys";
 		move_right_btn1: button0 {
-			label = "User";
+			label = "Joystick 1 right";
 			gpios = <&gpioa 4 (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         move_left_btn1: button1 {
-			label = "User";
+			label = "Joystick 1 left";
 			gpios = <&gpiob 0  (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         jump_btn1: button2 {
-			label = "User";
+			label = "Joystick 1 jump";
 			gpios = <&gpioc 0  (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         move_down_btn1: button3 {
-			label = "User";
+			label = "Joystick 1 down";
 			gpios = <&gpioc 1 (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         shoot_btn1: button4 {
-			label = "User";
+			label = "Shoot button 1";
 			gpios = <&gpiob 11 GPIO_ACTIVE_HIGH>;
 			zephyr,code = <INPUT_KEY_0>;
         };
 
          reload_btn1: button5 {
-                label = "User";
+                label = "Shoot button 1";
                 gpios = <&gpiob 12 GPIO_ACTIVE_HIGH>;
                 zephyr,code = <INPUT_KEY_0>;
          };
@@ -47,38 +47,38 @@
          
 
 
-         move_right_btn2: button6 {
-			label = "User";
+        move_right_btn2: button6 {
+			label = "Joystick 2 right";
 			gpios = <&gpiob 1 (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         move_left_btn2: button7 {
-			label = "User";
+			label = "Joystick 2 left";
 			gpios = <&gpiob 15 (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         jump_btn2: button8 {
-			label = "User";
+			label = "Joystick 2 jump";
 			gpios = <&gpiob 13 (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         move_down_btn2: button9 {
-			label = "User";
+			label = "Joystick 2 down";
 			gpios = <&gpiob 14 (GPIO_ACTIVE_HIGH)>;
 			zephyr,code = <INPUT_KEY_0>;
 		};
 
         shoot_btn2: button10 {
-			label = "User";
+			label = "Shoot button 2";
 			gpios = <&gpioa 11 GPIO_ACTIVE_HIGH>;
 			zephyr,code = <INPUT_KEY_0>;
         };
 
          reload_btn2: button11 {
-                label = "User";
+                label = "Reload button 2";
                 gpios = <&gpioa 12  GPIO_ACTIVE_HIGH>;
                 zephyr,code = <INPUT_KEY_0>;
          };
