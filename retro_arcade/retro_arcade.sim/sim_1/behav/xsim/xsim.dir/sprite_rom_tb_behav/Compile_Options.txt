@@ -1,1 +1,0 @@
--wto "fb1b38dc185a4e488965a048493f423b" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "sprite_rom_tb_behav" "xil_defaultlib.sprite_rom_tb" -log "elaborate.log" 

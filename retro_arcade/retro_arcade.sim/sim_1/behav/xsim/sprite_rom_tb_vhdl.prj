@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../retro_arcade.srcs/sources_1/new/sprite_rom.vhd" \
-"../../../../retro_arcade.srcs/sim_1/new/sprite_rom_tb.vhd" \
-
-# Do not sort compile order
-nosort
