@@ -1,8 +1,6 @@
 library IEEE;
-use IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity sprite_rom is
     Port ( addr  : in  STD_LOGIC_VECTOR(5 downto 0); -- 6-bit adres (0-63)
@@ -10,9 +8,10 @@ entity sprite_rom is
 end sprite_rom;
 
 architecture Behavioral of sprite_rom is
+    -- 8x8 Sprite in ROM
     type rom_type is array (0 to 63) of STD_LOGIC;  
-    signal rom : rom_type := (
-        '0', '0', '1', '1', '1', '1', '0', '0',  -- Rij 1 (aangepast voorbeeld)
+    constant rom : rom_type := (
+        '0', '0', '1', '1', '1', '1', '0', '0',  -- Rij 1
         '0', '1', '1', '0', '0', '1', '1', '0',  -- Rij 2
         '1', '1', '0', '0', '0', '0', '1', '1',  -- Rij 3
         '1', '1', '0', '1', '1', '0', '1', '1',  -- Rij 4
@@ -23,8 +22,6 @@ architecture Behavioral of sprite_rom is
     );
 
 begin
-    process(addr)
-    begin
-        
-    end process;
+    -- Haal pixel op uit ROM
+    pixel <= rom(to_integer(unsigned(addr)));
 end Behavioral;
