@@ -5,141 +5,319 @@
 
 #define SPI_DEV DT_NODELABEL(spi1)
 
-/* Get the button from the devicetree using the "right" alias */
-static const struct gpio_dt_spec right1 = GPIO_DT_SPEC_GET(DT_ALIAS(right1), gpios);
-static const struct gpio_dt_spec left1 = GPIO_DT_SPEC_GET(DT_ALIAS(left1), gpios);
-static const struct gpio_dt_spec down1 = GPIO_DT_SPEC_GET(DT_ALIAS(down1), gpios);
-static const struct gpio_dt_spec jump1 = GPIO_DT_SPEC_GET(DT_ALIAS(jump1), gpios);
-static const struct gpio_dt_spec reload1 = GPIO_DT_SPEC_GET(DT_ALIAS(reload1), gpios);
-static const struct gpio_dt_spec shoot1 = GPIO_DT_SPEC_GET(DT_ALIAS(shoot1), gpios);
+/* ---------- Data Structures ---------- */
+typedef struct {
+    int x1, y1; // Linkerbovenhoek
+    int x2, y2; // Rechteronderhoek
+} Hitbox;
 
-static const struct gpio_dt_spec right2 = GPIO_DT_SPEC_GET(DT_ALIAS(right2), gpios);
-static const struct gpio_dt_spec left2 = GPIO_DT_SPEC_GET(DT_ALIAS(left2), gpios);
-static const struct gpio_dt_spec down2 = GPIO_DT_SPEC_GET(DT_ALIAS(down2), gpios);
-static const struct gpio_dt_spec jump2 = GPIO_DT_SPEC_GET(DT_ALIAS(jump2), gpios);
-static const struct gpio_dt_spec reload2 = GPIO_DT_SPEC_GET(DT_ALIAS(reload2), gpios);
-static const struct gpio_dt_spec shoot2 = GPIO_DT_SPEC_GET(DT_ALIAS(shoot2), gpios);
+/* ---------- Global Variables ---------- */
+static const struct gpio_dt_spec buttons[] = {
+    GPIO_DT_SPEC_GET(DT_ALIAS(right1),  gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(left1),   gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(down1),   gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(jump1),   gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(reload1), gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(shoot1),  gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(right2),  gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(left2),   gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(down2),   gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(jump2),   gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(reload2), gpios),
+    GPIO_DT_SPEC_GET(DT_ALIAS(shoot2),  gpios),
+};
 
-/* Helper function to send a single SPI byte */
-static void send_spi_bytes(uint16_t oohyeah)
+static const struct device *spi_dev;
+
+Hitbox hitboxes[] = {
+    {80,  140, 240, 160}, {290, 200, 350, 220}, {220, 260, 290, 280},
+    {350, 260, 420, 280}, {400, 140, 560, 160}, {0,   320, 160, 479},
+    {130, 280, 160, 320}, {480, 320, 639, 479}, {480, 280, 510, 320}
+};
+
+int Xbound = 639;
+int Ybound = 479;
+
+/* Speler 1 */
+uint16_t pos_x1 = 50, pos_y1 = 250;
+int playerSize = 16;
+int speed1     = 4;
+int gravity1   = 1;
+int jumpSpeed1 = 0;
+int jumpStrength1 = 15;
+bool inAir1    = true;
+bool facingRight1 = true;
+
+/* Speler 2 (voor demo) */
+uint16_t pos_x2 = 250, pos_y2 = 250;
+int speed2     = 2;
+int gravity2   = 1;
+int jumpSpeed2 = 0;
+bool inAir2    = true;
+bool facingRight2 = false;
+
+/* ---------- SPI: Sending 64 Bits ---------- */
+static void send_spi_64bits(uint64_t data)
 {
-	const struct device *spi_dev = DEVICE_DT_GET(SPI_DEV);
-	if (!spi_dev) {
-		printk("SPI device not found!\n");
-		return;
-	}
+    /* Make sure the SPI device is ready */
+    const struct device *spi_dev_local = DEVICE_DT_GET(SPI_DEV);
+    if (!spi_dev_local || !device_is_ready(spi_dev_local)) {
+        printk("SPI device not found or not ready!\n");
+        return;
+    }
 
-	/* Setup chip-select from devicetree */
-	struct spi_cs_control spi_cs = (struct spi_cs_control){
-		.gpio = GPIO_DT_SPEC_GET(SPI_DEV, cs_gpios),
-		.delay = 0,
-	};
+    /* Configure SPI: 10 MHz, 16 bits per word, MSB first, master mode */
+    struct spi_config config = {
+        .frequency = 10000000,
+        .operation = SPI_OP_MODE_MASTER | SPI_WORD_SET(16) | SPI_TRANSFER_MSB,
+        .slave     = 0,
+    };
 
-	/* Configure SPI parameters */
-	struct spi_config config = {
-		.frequency = 10000000,  /* 10 MHz */
-		.operation = SPI_OP_MODE_MASTER | SPI_WORD_SET(16) | SPI_TRANSFER_MSB,
-		.slave = 0,
-		.cs = spi_cs,
-	};
+    /*
+     * Break the 64-bit value into four 16-bit chunks
+     *    data[63:48], data[47:32], data[31:16], data[15:0]
+     */
+    uint16_t buf[4] = {
+        (data >> 48) & 0xFFFF,
+        (data >> 32) & 0xFFFF,
+        (data >> 16) & 0xFFFF,
+        (data >>  0) & 0xFFFF
+    };
 
-	uint16_t buf = oohyeah;
-	struct spi_buf tx_buf = { .buf = &buf, .len = 2 };
-	struct spi_buf_set tx_bufs = { .buffers = &tx_buf, .count = 1 };
+    /* Prepare buffers for spi_write() */
+    struct spi_buf tx_bufs[] = {
+        { .buf = &buf[0], .len = sizeof(uint16_t) },
+        { .buf = &buf[1], .len = sizeof(uint16_t) },
+        { .buf = &buf[2], .len = sizeof(uint16_t) },
+        { .buf = &buf[3], .len = sizeof(uint16_t) },
+    };
+    struct spi_buf_set tx = {
+        .buffers = tx_bufs,
+        .count   = 4
+    };
 
-	int ret = spi_write(spi_dev, &config, &tx_bufs);
-	if (ret) {
-		printk("SPI write failed: %d\n", ret);
-	} else {
-		printk("SPI write succeeded: 0x%02x\n", buf);
-	}
+    /* Send the data */
+    int ret = spi_write(spi_dev_local, &config, &tx);
+    if (ret) {
+        printk("SPI write failed: %d\n", ret);
+    } else {
+        printk("SPI sent: 0x%016llX\n", (unsigned long long)data);
+    }
 }
 
-void main(void)
+/* ---------- Collision Logic for Player 1 ---------- */
+void yCollisionCheck1(void)
 {
-    int retR1, retL1, retDown1, retJump1, retReload1, retShoot1;
-    int valR1, valL1, valDown1, valJump1, valReload1, valShoot1;
+    bool onGround = false;
 
-    int retR2, retL2, retDown2, retJump2, retReload2, retShoot2;
-    int valR2, valL2, valDown2, valJump2, valReload2, valShoot2;
+    for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+        Hitbox hb = hitboxes[i];
 
-    uint16_t code;
-   
+        /* Eenvoudige check: Is de X-range overlappend met deze hitbox? */
+        if (pos_x1 + playerSize > hb.x1 && pos_x1 - playerSize < hb.x2) {
+            /* Check of we ‘bovenop’ de hitbox terechtkomen */
+            if (pos_y1 + playerSize >= hb.y1 && pos_y1 <= hb.y1) {
+                pos_y1    = hb.y1 - playerSize;
+                jumpSpeed1 = 0;
+                onGround  = true;
+                break;
+            }
+        }
+    }
 
-    /* Configureer elke knop als input met pull-up */
-    retR1 = gpio_pin_configure_dt(&right1, GPIO_INPUT | GPIO_PULL_UP);
-    retL1 = gpio_pin_configure_dt(&left1, GPIO_INPUT | GPIO_PULL_UP);
-    retDown1 = gpio_pin_configure_dt(&down1, GPIO_INPUT | GPIO_PULL_UP);
-    retJump1 = gpio_pin_configure_dt(&jump1, GPIO_INPUT | GPIO_PULL_UP);
-    retReload1 = gpio_pin_configure_dt(&reload1, GPIO_INPUT | GPIO_PULL_UP);
-    retShoot1 = gpio_pin_configure_dt(&shoot1, GPIO_INPUT | GPIO_PULL_UP);
+    if (onGround) {
+        inAir1 = false;
+    }  else {
+        inAir1 = true;
+    }
+}
 
-    retR2 = gpio_pin_configure_dt(&right2, GPIO_INPUT | GPIO_PULL_UP);
-    retL2 = gpio_pin_configure_dt(&left2, GPIO_INPUT | GPIO_PULL_UP);
-    retDown2 = gpio_pin_configure_dt(&down2, GPIO_INPUT | GPIO_PULL_UP);
-    retJump2 = gpio_pin_configure_dt(&jump2, GPIO_INPUT | GPIO_PULL_UP);
-    retReload2 = gpio_pin_configure_dt(&reload2, GPIO_INPUT | GPIO_PULL_UP);
-    retShoot2 = gpio_pin_configure_dt(&shoot2, GPIO_INPUT | GPIO_PULL_UP);
+void xCollisionCheck1(void)
+{
+    for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+        Hitbox hb = hitboxes[i];
+
+        /* Eenvoudige check: Is de Y-range overlappend met deze hitbox? */
+        if (pos_y1 > hb.y1 && pos_y1 < hb.y2) {
+            /* Check of we tegen de box aanlopen van links*/
+            if (pos_x1 + playerSize > hb.x1 && pos_x1 < hb.x1) {
+                pos_x1    = hb.x1 - playerSize;
+                break;
+            }
+            /* Check of we tegen de box aanlopen van rechts*/
+            if (pos_x1 - playerSize < hb.x2 && pos_x1 > hb.x2) {
+                pos_x1    = hb.x2 + playerSize;
+                break;
+            }
+        }
+    }
+}
+
+void yBorderCheck1(void)
+{
+    /* Pas de jump/y-position aan */
+    if (inAir1) {
+        pos_y1 -= jumpSpeed1;  /* spring omhoog (positieve jumpSpeed) is Y omlaag) */
+        jumpSpeed1 -= gravity1;
+    }
+    /* Bodem? */
+    if (pos_y1 + playerSize >= Ybound) {
+        pos_y1    = Ybound - playerSize;
+        jumpSpeed1 = 0;
+        inAir1    = false;
+    }
+}
+
+void xBorderCheck1(void)
+{
+    if (pos_x1 < 0) {
+        pos_x1 = 0;
+    }
+    if (pos_x1 > Xbound - playerSize) {
+        pos_x1 = Xbound - playerSize;
+    }
+}
+
+/* ---------- (Optional) Collision Logic for Player 2 ---------- */
+/* Below is just a skeleton if you want to do the same for player 2. 
+   If not needed, you can remove these. */
+void yCollisionCheck2(void)
+{
+    bool onGround = false;
+
+    for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+        Hitbox hb = hitboxes[i];
+        if (pos_x2 + playerSize > hb.x1 && pos_x2 - playerSize < hb.x2) {
+            if (pos_y2 + playerSize >= hb.y1) {
+                pos_y2    = hb.y1 - playerSize;
+                jumpSpeed2 = 0;
+                onGround  = true;
+                break;
+            }
+        }
+    }
+
+    if (onGround) {
+        inAir2 = false;
+    }
+}
+
+void yBorderCheck2(void)
+{
+    if (inAir2) {
+        pos_y2 -= jumpSpeed2;
+        jumpSpeed2 -= gravity2;
+    }
+    if (pos_y2 + playerSize >= Ybound) {
+        pos_y2    = Ybound - playerSize;
+        jumpSpeed2 = 0;
+        inAir2    = false;
+    }
+}
+
+void xBorderCheck2(void)
+{
+    if (pos_x2 < 0) {
+        pos_x2 = 0;
+    }
+    if (pos_x2 > Xbound - playerSize) {
+        pos_x2 = Xbound - playerSize;
+    }
+}
+
+/* ---------- Main ---------- */
+int main(void)
+{
+    printk("Initializing...\n");
+
+    /* Verify the SPI device */
+    spi_dev = DEVICE_DT_GET(SPI_DEV);
+    if (!spi_dev || !device_is_ready(spi_dev)) {
+        printk("Error: SPI device not found or not ready!\n");
+        return -1;
+    }
+
+    /* Configure each button as input w/ pull-up */
+    for (int i = 0; i < ARRAY_SIZE(buttons); i++) {
+        if (!device_is_ready(buttons[i].port)) {
+            printk("Error: GPIO port for button %d not ready!\n", i);
+            return -1;
+        }
+        gpio_pin_configure_dt(&buttons[i], GPIO_INPUT | GPIO_PULL_UP);
+    }
+
+    printk("Initialization complete. Entering main loop...\n");
 
     while (1) {
-        valR1    = gpio_pin_get_dt(&right1);
-        valL1    = gpio_pin_get_dt(&left1);
-        valDown1 = gpio_pin_get_dt(&down1);
-        valJump1 = gpio_pin_get_dt(&jump1);
-        valShoot1 = gpio_pin_get_dt(&shoot1);
-        valReload1 = gpio_pin_get_dt(&reload1);
-
-        valR2    = gpio_pin_get_dt(&right2);
-        valL2    = gpio_pin_get_dt(&left2);
-        valDown2 = gpio_pin_get_dt(&down2);
-        valJump2 = gpio_pin_get_dt(&jump2);
-        valShoot2 = gpio_pin_get_dt(&shoot2);
-        valReload2 = gpio_pin_get_dt(&reload2);
-
-
-         code = 0;
-         if (valShoot2 == 0) {
-            code |= 0x0800;
-         }
-        if (valReload2 == 0) {
-            code |= 0x0400;
-        }
-        if (valR2 == 0) {
-            code |= 0x0200;
-        }
-        if (valL2 == 0) {
-            code |= 0x0100;
-        }
-        if (valDown2 == 0) {
-            code |= 0x0080;
-        }
-        if (valJump2 == 0) {
-            code |= 0x0040;
-        }
-        /////////////////////////////////////////////////////////////////////////////
-        if (valShoot1 == 0) {
-            code |= 0x0020;
-        }
-        if (valReload1 == 0) {
-            code |= 0x0010;
-        }
-        if (valR1 == 0) {
-            code |= 0x0008;
-        }
-        if (valL1 == 0) {
-            code |= 0x0004;
-        }
-        if (valDown1 == 0) {
-            code |= 0x0002;
-        }
-        if (valJump1 == 0) {
-            code |= 0x0001;
+        /* Read all button states */
+        int values[ARRAY_SIZE(buttons)];
+        for (int i = 0; i < ARRAY_SIZE(buttons); i++) {
+            values[i] = gpio_pin_get_dt(&buttons[i]);
         }
 
-        /* Send the combined SPI code */
-        send_spi_bytes(code);
+        /* Player 1: Right1 = values[0], Left1 = values[1], Jump1 = values[3], etc. */
+        if (values[0] == 0) {
+            /* Move right */
+            pos_x1 = (pos_x1 < Xbound - playerSize) ? pos_x1 + speed1 : Xbound - playerSize;
+            facingRight1 = true;
+        }
+        if (values[1] == 0) {
+            /* Move left */
+            pos_x1 = (pos_x1 > 0) ? pos_x1 - speed1 : 0;
+            facingRight1 = false;
+        }
+        if ((values[3] == 0) && !inAir1) {
+            /* Jump */
+            jumpSpeed1 = jumpStrength1;
+            inAir1     = true;
+        }
 
-        /* Korte vertraging om een correcte CS-toggle tussen transacties te waarborgen */
+        /* Player 2 example (optional) 
+           Suppose Right2= values[6], Left2= values[7], Jump2=values[9], etc. */
+        if (values[6] == 0) {
+            pos_x2 = (pos_x2 < Xbound - playerSize) ? pos_x2 + speed2 : Xbound - playerSize;
+        }
+        if (values[7] == 0) {
+            pos_x2 = (pos_x2 > 0) ? pos_x2 - speed2 : 0;
+        }
+        if ((values[9] == 0) && !inAir2) {
+            jumpSpeed2 = 10;
+            inAir2     = true;
+        }
+
+        /* Update Player 1 collisions/movement */
+        yBorderCheck1();
+        yCollisionCheck1();
+        xCollisionCheck1();
+        xBorderCheck1();
+
+        /* Update Player 2 collisions/movement */
+        yBorderCheck2();
+        yCollisionCheck2();
+        xBorderCheck2();
+
+        /* Print positions */
+        printk("P1: X=%d, Y=%d | P2: X=%d, Y=%d\n", pos_x1, pos_y1, pos_x2, pos_y2);
+
+        /* ------------------------------------------------------ *
+         * Pack the (x, y) positions of both players into 64 bits:
+         *   bits [15: 0] = pos_x1
+         *   bits [31:16] = pos_y1
+         *   bits [47:32] = pos_x2
+         *   bits [63:48] = pos_y2
+         * ------------------------------------------------------ */
+        uint64_t code = 0ULL;
+        code |= ((uint64_t)pos_x1 & 0xFFFF) <<  0;
+        code |= ((uint64_t)pos_y1 & 0xFFFF) << 16;
+        code |= ((uint64_t)pos_x2 & 0xFFFF) << 32;
+        code |= ((uint64_t)pos_y2 & 0xFFFF) << 48;
+
+        /* Now send these 64 bits via SPI in four 16-bit chunks. */
+        send_spi_64bits(code);
+
+        /* Short delay */
         k_msleep(50);
     }
+
+    return 0;
 }
