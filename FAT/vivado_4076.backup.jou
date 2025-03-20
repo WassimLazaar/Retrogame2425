@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Mar 19 16:17:28 2025
+# Process ID: 4076
+# Current directory: C:/Progh/Code/Project_RetroGame/FAT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15044 C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.xpr
+# Log file: C:/Progh/Code/Project_RetroGame/FAT/vivado.log
+# Journal file: C:/Progh/Code/Project_RetroGame/FAT\vivado.jou
+# Running On        :DESKTOP-H0VVJ00
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16804 MB
+# Swap memory       :8053 MB
+# Total Virtual     :24858 MB
+# Available Virtual :6181 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.xpr
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc
+set_msg_config -id {Project 1-19} -new_severity {INFO}
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+archive_project C:/Progh/Code/Project_RetroGame/Fat_Backup/CharacterLevelMove.xpr.zip -temp_dir C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-4076-DESKTOP-H0VVJ00 -force -include_local_ip_cache

@@ -1,0 +1,90 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Wed Mar 19 14:42:57 2025
+| Host         : DESKTOP-H0VVJ00 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file DVI_Top_control_sets_placed.rpt
+| Design       : DVI_Top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    52 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    12 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              28 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              80 |           27 |
+| Yes          | No                    | No                     |              30 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              10 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------+---------------------------------------+--------------------------------------------------------------+------------------+----------------+--------------+
+|                      Clock Signal                      |             Enable Signal             |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------------+---------------------------------------+--------------------------------------------------------------+------------------+----------------+--------------+
+|  prescaler_instance/inst/clk_25                        |                                       | dvi_driver_inst/hsync_internal_i_1_n_0                       |                1 |              1 |         1.00 |
+|  prescaler_instance/inst/clk_25                        |                                       | dvi_driver_inst/vsync_internal_i_1_n_0                       |                1 |              1 |         1.00 |
+|  prescaler_instance/inst/clk_25                        |                                       |                                                              |                4 |              6 |         1.50 |
+|  prescaler_instance/inst/clk_25                        |                                       | dvi_driver_inst/hcount_int[9]_i_1_n_0                        |                3 |             10 |         3.33 |
+|  prescaler_instance/inst/clk_25                        |                                       | dvi_driver_inst/SR[0]                                        |                4 |             10 |         2.50 |
+|  prescaler_instance/inst/clk_25                        | dvi_driver_inst/E[0]                  | pixel_gen_inst/DisplayLevel_inst/local_x                     |                6 |             10 |         1.67 |
+|  prescaler_instance/inst/clk_25                        | dvi_driver_inst/vcount_int[9]_i_1_n_0 |                                                              |                5 |             10 |         2.00 |
+|  prescaler_instance/inst/clk_25                        |                                       | pixel_gen_inst/rgb_out[11]_i_1_n_0                           |                4 |             12 |         3.00 |
+|  prescaler_instance/inst/clk_25                        | dvi_driver_inst/E[0]                  |                                                              |                6 |             20 |         3.33 |
+|  pixel_gen_inst/DisplayLevel_inst/ControlChar_inst/clk |                                       |                                                              |               10 |             22 |         2.20 |
+|  prescaler_instance/inst/clk_25                        |                                       | pixel_gen_inst/DisplayLevel_inst/divider_counter[21]_i_1_n_0 |                7 |             22 |         3.14 |
+|  prescaler_instance/inst/clk_25                        |                                       | pixel_gen_inst/DisplayLevel_inst/ControlChar_inst/slow_clk   |                7 |             24 |         3.43 |
++--------------------------------------------------------+---------------------------------------+--------------------------------------------------------------+------------------+----------------+--------------+
+
+

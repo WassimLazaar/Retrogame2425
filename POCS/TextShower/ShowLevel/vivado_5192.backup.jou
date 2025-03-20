@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Feb 26 13:16:51 2025
+# Process ID: 5192
+# Current directory: C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19240 C:\Progh\Code\Project_RetroGame\POCS\TextShower\ShowLevel\ShowLevel.xpr
+# Log file: C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel/vivado.log
+# Journal file: C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel\vivado.jou
+# Running On        :DESKTOP-H0VVJ00
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :19045
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16804 MB
+# Swap memory       :6128 MB
+# Total Virtual     :22933 MB
+# Available Virtual :6909 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel/ShowLevel.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel/ShowLevel.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel/ShowLevel.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel/ShowLevel.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/POCS/TextShower/ShowLevel/ShowLevel.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

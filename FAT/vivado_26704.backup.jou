@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Mar 19 16:08:26 2025
+# Process ID: 26704
+# Current directory: C:/Progh/Code/Project_RetroGame/FAT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10472 C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.xpr
+# Log file: C:/Progh/Code/Project_RetroGame/FAT/vivado.log
+# Journal file: C:/Progh/Code/Project_RetroGame/FAT\vivado.jou
+# Running On        :DESKTOP-H0VVJ00
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16804 MB
+# Swap memory       :8053 MB
+# Total Virtual     :24858 MB
+# Available Virtual :6488 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.xpr
+update_compile_order -fileset sources_1

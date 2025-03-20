@@ -1,0 +1,553 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Mar 19 17:12:14 2025
+# Process ID: 22288
+# Current directory: C:/Progh/Code/Project_RetroGame/FAT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27840 C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.xpr
+# Log file: C:/Progh/Code/Project_RetroGame/FAT/vivado.log
+# Journal file: C:/Progh/Code/Project_RetroGame/FAT\vivado.jou
+# Running On        :DESKTOP-H0VVJ00
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16804 MB
+# Swap memory       :8053 MB
+# Total Virtual     :24858 MB
+# Available Virtual :6065 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24c:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24c/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k24i:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k24i/1.0/board.xml as part xck24-ubva530-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.4/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kd240_som:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kd240_som/1.0/board.xml as part xck24-ubva530-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.0/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kr260_som:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kr260_som/1.1/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.4/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Progh/Code/Project_RetroGame/Show_Level/archive_project_summary.txt'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1537.301 ; gain = 453.316
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: DVI_Top
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21396
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2395.480 ; gain = 444.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DVI_Top' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:19]
+INFO: [Synth 8-3491] module 'clkDVIprescaler' declared at 'C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6' bound to instance 'prescaler_instance' of component 'clkDVIprescaler' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:75]
+INFO: [Synth 8-6157] synthesizing module 'clkDVIprescaler' [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clkDVIprescaler' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6]
+INFO: [Synth 8-3491] module 'ReadSpi' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:6' bound to instance 'Spi_instance' of component 'ReadSpi' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'ReadSpi' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'ReadSpi' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:15]
+INFO: [Synth 8-3491] module 'DVI_Driver' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:5' bound to instance 'dvi_driver_inst' of component 'DVI_Driver' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'DVI_Driver' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'DVI_Driver' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:16]
+INFO: [Synth 8-3491] module 'Pixel_Gen' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:5' bound to instance 'pixel_gen_inst' of component 'Pixel_Gen' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'Pixel_Gen' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:16]
+INFO: [Synth 8-3491] module 'CharacterController' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:5' bound to instance 'DisplayCharacter_inst' of component 'CharacterController' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'CharacterController' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:15]
+INFO: [Synth 8-3491] module 'ControlCharacter' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:5' bound to instance 'ControlChar_inst' of component 'ControlCharacter' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'ControlCharacter' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ControlCharacter' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:17]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ROM_inst_1' of component 'blk_mem_gen_0' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:151]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'ROM_inst_2' of component 'blk_mem_gen_1' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:159]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_2' declared at 'C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6' bound to instance 'ROM_inst_3' of component 'blk_mem_gen_2' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:167]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_3' declared at 'C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6' bound to instance 'ROM_inst_4' of component 'blk_mem_gen_3' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:175]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'CharacterController' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:15]
+INFO: [Synth 8-3491] module 'Displaylevel' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:5' bound to instance 'DisplayLevel_inst' of component 'Displaylevel' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'Displaylevel' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:14]
+INFO: [Synth 8-3491] module 'blk_mem_gen_4' declared at 'C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6' bound to instance 'ROM_inst' of component 'blk_mem_gen_4' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:64]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/.Xil/Vivado-22288-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Displaylevel' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_Gen' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'DVI_Top' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:19]
+WARNING: [Synth 8-7129] Port spi_data_in[63] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[62] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[61] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[60] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[59] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[58] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[57] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[56] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[55] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[54] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[53] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[52] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[51] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[50] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[49] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[48] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[47] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[46] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[45] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[44] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[43] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[42] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[41] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[40] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[39] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[38] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[37] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[36] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[35] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[34] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[33] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[32] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[31] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[30] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[29] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[28] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[27] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[26] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[25] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[24] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[23] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[22] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[21] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[20] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[19] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[18] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[17] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[16] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[15] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[14] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[13] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[12] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[11] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[10] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[9] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[8] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[7] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[6] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[5] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[4] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[3] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[2] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[1] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port spi_data_in[0] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[9] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[8] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[7] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[6] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[5] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[4] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[3] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[2] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[1] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hcount[0] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[9] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[8] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[7] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[6] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[5] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[4] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[3] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[2] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[1] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port vcount[0] in module ControlCharacter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn_reset in module DVI_Top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2513.551 ; gain = 562.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2513.551 ; gain = 562.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2513.551 ; gain = 562.902
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.dcp' for cell 'prescaler_instance'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.dcp' for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2513.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc] for cell 'prescaler_instance/inst'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc] for cell 'prescaler_instance/inst'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc] for cell 'prescaler_instance/inst'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc] for cell 'prescaler_instance/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DVI_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/DVI_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
+Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DVI_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
+WARNING: [Vivado 12-507] No nets matched 'SCK_IBUF'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:42]
+Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DVI_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DVI_Top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/DVI_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2612.141 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.188 ; gain = 690.539
+57 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2641.188 ; gain = 970.004
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\Displaylevel.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\Displaylevel.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\Displaylevel.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\Displaylevel.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\ControlCharacter.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\XY_GEN.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\new\CharacterController.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Progh\Code\Project_RetroGame\FAT\CharacterLevelMove.srcs\sources_1\imports\Week 5 + 6 - Bounching Square - Ball\DVI.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 19 17:27:11 2025...
