@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/DVI_Top.tcl"
+  variable script "C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/DVI_Top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 set_msg_config  -id {Project 1-19}  -new_severity {INFO} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
@@ -66,50 +64,50 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.cache/wt [current_project]
-set_property parent.project_path C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.xpr [current_project]
+set_property webtalk.parent_dir C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.cache/wt [current_project]
+set_property parent.project_path C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/walte/AppData/Roaming/Xilinx/Vivado/2024.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.cache/ip [current_project]
+set_property ip_output_repo c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter1.coe
-add_files C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter2.coe
-add_files C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter4.coe
-add_files C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter3.coe
-add_files C:/Progh/Code/Project_RetroGame/FAT/CoeFilesOpslag/MapBeter.coe
+add_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter1.coe
+add_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter2.coe
+add_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter4.coe
+add_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/CoeFileOpslag/Beter3.coe
+add_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CoeFilesOpslag/MapBeter.coe
 read_vhdl -library xil_defaultlib {
-  C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd
-  C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd
-  C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd
-  C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd
-  C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd
-  C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd
-  {C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd}
+  C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd
+  C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd
+  C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd
+  C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd
+  C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd
+  C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd
+  {C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd}
 }
-read_ip -quiet C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xci
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc]
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_ooc.xdc]
+read_ip -quiet C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc]
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_ooc.xdc]
 
-read_ip -quiet C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
-read_ip -quiet C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
+read_ip -quiet C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
+read_ip -quiet C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2_ooc.xdc]
 
-read_ip -quiet C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3_ooc.xdc]
+read_ip -quiet C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3_ooc.xdc]
 
-read_ip -quiet C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
-set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4_ooc.xdc]
+read_ip -quiet C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.xci
+set_property used_in_implementation false [get_files -all c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -120,15 +118,15 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc
-set_property used_in_implementation false [get_files C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+read_xdc C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc
+set_property used_in_implementation false [get_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
 
-read_xdc C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc
-set_property used_in_implementation false [get_files C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+read_xdc C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc
+set_property used_in_implementation false [get_files C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/utils_1/imports/synth_1/DVI.dcp
+read_checkpoint -auto_incremental -incremental C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/utils_1/imports/synth_1/DVI.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

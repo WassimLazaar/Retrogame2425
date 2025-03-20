@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Mar 20 11:06:56 2025
-# Process ID: 4060
-# Current directory: C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1
+# Start of session at: Thu Mar 20 11:46:03 2025
+# Process ID: 15132
+# Current directory: C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1
 # Command line: vivado.exe -log DVI_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DVI_Top.tcl
-# Log file: C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/DVI_Top.vds
-# Journal file: C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1\vivado.jou
+# Log file: C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/DVI_Top.vds
+# Journal file: C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1\vivado.jou
 # Running On        :DESKTOP-H0VVJ00
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
@@ -17,14 +17,14 @@
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :16804 MB
-# Swap memory       :9524 MB
-# Total Virtual     :26329 MB
-# Available Virtual :3898 MB
+# Swap memory       :8053 MB
+# Total Virtual     :24858 MB
+# Available Virtual :3649 MB
 #-----------------------------------------------------------
 source DVI_Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 495.543 ; gain = 200.871
-Command: read_checkpoint -auto_incremental -incremental C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/utils_1/imports/synth_1/DVI.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/utils_1/imports/synth_1/DVI.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 494.035 ; gain = 199.227
+Command: read_checkpoint -auto_incremental -incremental C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/utils_1/imports/synth_1/DVI.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/utils_1/imports/synth_1/DVI.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top DVI_Top -part xc7a35tcpg236-1
 Starting synth_design
@@ -36,48 +36,48 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26068
+INFO: [Synth 8-7075] Helper process launched with PID 19960
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1363.309 ; gain = 449.652
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1363.309 ; gain = 450.473
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'DVI_Top' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:19]
-INFO: [Synth 8-3491] module 'clkDVIprescaler' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6' bound to instance 'prescaler_instance' of component 'clkDVIprescaler' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:75]
-INFO: [Synth 8-6157] synthesizing module 'clkDVIprescaler' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clkDVIprescaler' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6]
-INFO: [Synth 8-3491] module 'ReadSpi' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:6' bound to instance 'Spi_instance' of component 'ReadSpi' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:81]
-INFO: [Synth 8-638] synthesizing module 'ReadSpi' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'ReadSpi' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:15]
-INFO: [Synth 8-3491] module 'DVI_Driver' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:5' bound to instance 'dvi_driver_inst' of component 'DVI_Driver' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:90]
-INFO: [Synth 8-638] synthesizing module 'DVI_Driver' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'DVI_Driver' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:16]
-INFO: [Synth 8-3491] module 'Pixel_Gen' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:5' bound to instance 'pixel_gen_inst' of component 'Pixel_Gen' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:101]
-INFO: [Synth 8-638] synthesizing module 'Pixel_Gen' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:16]
-INFO: [Synth 8-3491] module 'CharacterController' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:5' bound to instance 'DisplayCharacter_inst' of component 'CharacterController' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'CharacterController' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:15]
-INFO: [Synth 8-3491] module 'ControlCharacter' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:5' bound to instance 'ControlChar_inst' of component 'ControlCharacter' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:102]
-INFO: [Synth 8-638] synthesizing module 'ControlCharacter' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'ControlCharacter' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:15]
-INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ROM_inst_1' of component 'blk_mem_gen_0' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:147]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'ROM_inst_2' of component 'blk_mem_gen_1' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:155]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_2' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6' bound to instance 'ROM_inst_3' of component 'blk_mem_gen_2' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:163]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-3491] module 'blk_mem_gen_3' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6' bound to instance 'ROM_inst_4' of component 'blk_mem_gen_3' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:171]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'CharacterController' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:15]
-INFO: [Synth 8-3491] module 'Displaylevel' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:5' bound to instance 'DisplayLevel_inst' of component 'Displaylevel' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'Displaylevel' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:14]
-INFO: [Synth 8-3491] module 'blk_mem_gen_4' declared at 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6' bound to instance 'ROM_inst' of component 'blk_mem_gen_4' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:64]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-4060-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'Displaylevel' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'Pixel_Gen' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'DVI_Top' (0#1) [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'DVI_Top' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:19]
+INFO: [Synth 8-3491] module 'clkDVIprescaler' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6' bound to instance 'prescaler_instance' of component 'clkDVIprescaler' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:75]
+INFO: [Synth 8-6157] synthesizing module 'clkDVIprescaler' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clkDVIprescaler' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/clkDVIprescaler_stub.v:6]
+INFO: [Synth 8-3491] module 'ReadSpi' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:6' bound to instance 'Spi_instance' of component 'ReadSpi' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'ReadSpi' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'ReadSpi' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:15]
+INFO: [Synth 8-3491] module 'DVI_Driver' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:5' bound to instance 'dvi_driver_inst' of component 'DVI_Driver' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'DVI_Driver' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'DVI_Driver' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/DVI_Display.vhd:16]
+INFO: [Synth 8-3491] module 'Pixel_Gen' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:5' bound to instance 'pixel_gen_inst' of component 'Pixel_Gen' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'Pixel_Gen' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:16]
+INFO: [Synth 8-3491] module 'CharacterController' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:5' bound to instance 'DisplayCharacter_inst' of component 'CharacterController' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'CharacterController' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:15]
+INFO: [Synth 8-3491] module 'ControlCharacter' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:5' bound to instance 'ControlChar_inst' of component 'ControlCharacter' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'ControlCharacter' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'ControlCharacter' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ControlCharacter.vhd:15]
+INFO: [Synth 8-3491] module 'blk_mem_gen_0' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6' bound to instance 'ROM_inst_1' of component 'blk_mem_gen_0' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:147]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6' bound to instance 'ROM_inst_2' of component 'blk_mem_gen_1' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:155]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_2' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6' bound to instance 'ROM_inst_3' of component 'blk_mem_gen_2' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:163]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-3491] module 'blk_mem_gen_3' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6' bound to instance 'ROM_inst_4' of component 'blk_mem_gen_3' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:171]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_3' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_3' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_3_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'CharacterController' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/CharacterController.vhd:15]
+INFO: [Synth 8-3491] module 'Displaylevel' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:5' bound to instance 'DisplayLevel_inst' of component 'Displaylevel' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'Displaylevel' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:14]
+INFO: [Synth 8-3491] module 'blk_mem_gen_4' declared at 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6' bound to instance 'ROM_inst' of component 'blk_mem_gen_4' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:64]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_4' [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_4' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/.Xil/Vivado-15132-DESKTOP-H0VVJ00/realtime/blk_mem_gen_4_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Displaylevel' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/Displaylevel.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Pixel_Gen' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/XY_GEN.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'DVI_Top' (0#1) [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd:19]
 WARNING: [Synth 8-7129] Port spi_data_in[63] in module ControlCharacter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port spi_data_in[62] in module ControlCharacter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port spi_data_in[61] in module ControlCharacter is either unconnected or has no load
@@ -124,89 +124,89 @@ WARNING: [Synth 8-7129] Port spi_data_in[11] in module ControlCharacter is eithe
 WARNING: [Synth 8-7129] Port spi_data_in[10] in module ControlCharacter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port btn_reset in module DVI_Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1477.969 ; gain = 564.312
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1477.324 ; gain = 564.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1477.969 ; gain = 564.312
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1477.324 ; gain = 564.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1477.969 ; gain = 564.312
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1477.324 ; gain = 564.488
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1477.969 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1477.324 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc] for cell 'prescaler_instance'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc] for cell 'prescaler_instance'
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
-Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
-WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
-Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DVI_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DVI_Top_propImpl.xdc].
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc] for cell 'prescaler_instance'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc] for cell 'prescaler_instance'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2/blk_mem_gen_2_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3/blk_mem_gen_3_in_context.xdc] for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4/blk_mem_gen_4_in_context.xdc] for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
+Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
+Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DVI_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DVI_Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/DVI_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
-WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
-WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
-WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
-WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
-WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
-WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
-WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
-WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
-WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
-WARNING: [Vivado 12-507] No nets matched 'SCK_IBUF'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:42]
-Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DVI_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DVI_Top_propImpl.xdc].
+Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
+WARNING: [Vivado 12-507] No nets matched 'SCK_IBUF'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:42]
+Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DVI_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DVI_Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/DVI_Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1506.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1530.516 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1506.656 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1530.516 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk100. (constraint file  c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100. (constraint file  c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk100. (constraint file  c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk100. (constraint file  c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler/clkDVIprescaler_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for prescaler_instance. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2. (constraint file  auto generated constraint).
@@ -214,10 +214,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for pixel_gen_inst/DisplayCharacter_i
 Applied set_property KEEP_HIERARCHY = SOFT for pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for pixel_gen_inst/DisplayLevel_inst/ROM_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -261,28 +261,28 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3936] Found unconnected internal register 'Spi_instance/output_register_reg' and it is trimmed from '64' to '26' bits. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:37]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Spi_instance/output_register_reg' and it is trimmed from '64' to '26' bits. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/sources_1/new/ReadSpi.vhd:37]
 WARNING: [Synth 8-7129] Port btn_reset in module DVI_Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -300,37 +300,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -368,18 +368,18 @@ Report Cell Usage:
 |18    |OBUF            |    16|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1506.656 ; gain = 564.312
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1506.656 ; gain = 593.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1530.516 ; gain = 564.488
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1530.516 ; gain = 617.680
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1506.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1530.516 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1506.656 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1530.516 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -387,8 +387,8 @@ Synth Design complete | Checksum: cd20f3d
 INFO: [Common 17-83] Releasing license: Synthesis
 61 Infos, 71 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1506.656 ; gain = 996.227
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1506.656 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/synth_1/DVI_Top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1530.516 ; gain = 1020.746
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1530.516 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/synth_1/DVI_Top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file DVI_Top_utilization_synth.rpt -pb DVI_Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 11:07:41 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 11:46:42 2025...

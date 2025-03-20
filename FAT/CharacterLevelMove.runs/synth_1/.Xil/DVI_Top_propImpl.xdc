@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc rfile:../../../CharacterLevelMove.srcs/constrs_1/new/const.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc rfile:../../../CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc rfile:../../../CharacterLevelMove.srcs/constrs_1/new/const.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc rfile:../../../CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOSTANDARD LVCMOS33 [get_ports clk25]
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]

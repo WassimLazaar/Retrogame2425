@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Mar 20 11:07:49 2025
-# Process ID: 11556
-# Current directory: C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1
+# Start of session at: Thu Mar 20 11:46:50 2025
+# Process ID: 13372
+# Current directory: C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1
 # Command line: vivado.exe -log DVI_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DVI_Top.tcl -notrace
-# Log file: C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top.vdi
-# Journal file: C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1\vivado.jou
+# Log file: C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top.vdi
+# Journal file: C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1\vivado.jou
 # Running On        :DESKTOP-H0VVJ00
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
@@ -17,107 +17,107 @@
 # CPU Physical cores:4
 # CPU Logical cores :8
 # Host memory       :16804 MB
-# Swap memory       :10606 MB
-# Total Virtual     :27411 MB
-# Available Virtual :5098 MB
+# Swap memory       :9147 MB
+# Total Virtual     :25952 MB
+# Available Virtual :4599 MB
 #-----------------------------------------------------------
 source DVI_Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 496.621 ; gain = 201.211
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 493.594 ; gain = 198.059
 Command: link_design -top DVI_Top -part xc7a35tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Device 21-9227] Part: xc7a35tcpg236-1 does not have CEAM library.
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.dcp' for cell 'prescaler_instance'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.dcp' for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 946.168 ; gain = 0.000
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.dcp' for cell 'prescaler_instance'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_2/blk_mem_gen_2.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_3/blk_mem_gen_3.dcp' for cell 'pixel_gen_inst/DisplayCharacter_inst/ROM_inst_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/blk_mem_gen_4/blk_mem_gen_4.dcp' for cell 'pixel_gen_inst/DisplayLevel_inst/ROM_inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 947.445 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2024.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc] for cell 'prescaler_instance/inst'
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc] for cell 'prescaler_instance/inst'
-Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc] for cell 'prescaler_instance/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc:54]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc:54]
-get_clocks: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1635.371 ; gain = 576.410
-Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc] for cell 'prescaler_instance/inst'
-Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc] for cell 'prescaler_instance/inst'
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler_board.xdc] for cell 'prescaler_instance/inst'
+Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc] for cell 'prescaler_instance/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc:54]
+get_clocks: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1634.875 ; gain = 576.895
+Finished Parsing XDC File [c:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.gen/sources_1/ip/clkDVIprescaler/clkDVIprescaler.xdc] for cell 'prescaler_instance/inst'
+Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:13]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'clk25'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc:20]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
-Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
-WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
+Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/const.xdc]
+Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:2]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'SCLK'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:3]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:9]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:10]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:13]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'MISO'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:14]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'led'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:22]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:23]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:25]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:33]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:34]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:35]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'LED_JUMP'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:36]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'LED_LEFT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:37]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'LED_RIGHT'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:38]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'SS_n'. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc:40]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
+Finished Parsing XDC File [C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.srcs/constrs_1/new/kontstains.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1635.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1634.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 16 Infos, 20 Warnings, 20 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1635.371 ; gain = 1123.133
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1634.875 ; gain = 1124.082
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -128,13 +128,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.940 . Memory (MB): peak = 1635.371 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.858 . Memory (MB): peak = 1634.875 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1657.098 ; gain = 21.727
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1657.113 ; gain = 22.238
 
 Starting Logic Optimization Task
 
@@ -143,30 +143,30 @@ Phase 1 Initialization
 Phase 1.1 Core Generation And Design Setup
 Phase 1.1 Core Generation And Design Setup | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2031.613 ; gain = 0.000
 
 Phase 1.2 Setup Constraints And Sort Netlist
 Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Phase 1 Initialization | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2031.613 ; gain = 0.000
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Timer Update
 Phase 2.1 Timer Update | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2031.613 ; gain = 0.000
 
 Phase 2.2 Timing Data Collection
 Phase 2.2 Timing Data Collection | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Phase 2 Timer Update And Timing Data Collection | Checksum: 25243d6b1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2031.613 ; gain = 0.000
 
 Phase 3 Retarget
 INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
@@ -174,7 +174,7 @@ INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 3 Retarget | Checksum: 2a1c00f40
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Retarget | Checksum: 2a1c00f40
 INFO: [Opt 31-389] Phase Retarget created 20 cells and removed 21 cells
 INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
@@ -183,21 +183,21 @@ Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Phase 4 Constant propagation | Checksum: 22fb02524
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Constant propagation | Checksum: 22fb02524
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 5 Sweep
 Phase 5 Sweep | Checksum: 2ca1437d7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Sweep | Checksum: 2ca1437d7
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 6 BUFG optimization
 Phase 6 BUFG optimization | Checksum: 2ca1437d7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 2031.613 ; gain = 0.000
 BUFG optimization | Checksum: 2ca1437d7
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
@@ -205,14 +205,14 @@ Phase 7 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
 Phase 7 Shift Register Optimization | Checksum: 2ca1437d7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Shift Register Optimization | Checksum: 2ca1437d7
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
 Phase 8 Post Processing Netlist | Checksum: 2ca1437d7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Post Processing Netlist | Checksum: 2ca1437d7
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
@@ -221,19 +221,19 @@ Phase 9 Finalization
 Phase 9.1 Finalizing Design Cores and Updating Shapes
 Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 2c8a7b2c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 2031.613 ; gain = 0.000
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Phase 9.2 Verifying Netlist Connectivity | Checksum: 2c8a7b2c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Phase 9 Finalization | Checksum: 2c8a7b2c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 2031.613 ; gain = 0.000
 Opt_design Change Summary
 =========================
 
@@ -252,7 +252,7 @@ Opt_design Change Summary
 
 Ending Logic Optimization Task | Checksum: 2c8a7b2c0
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 2027.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 2031.613 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -272,10 +272,10 @@ Number of Flops added for Enable Generation: 1
 
 Ending PowerOpt Patch Enables Task | Checksum: 235944bd8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Ending Power Optimization Task | Checksum: 235944bd8
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2131.824 ; gain = 104.176
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 104.285
 
 Starting Final Cleanup Task
 
@@ -283,39 +283,39 @@ Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Logic Optimization Task | Checksum: 224983978
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Ending Final Cleanup Task | Checksum: 224983978
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Ending Netlist Obfuscation Task | Checksum: 224983978
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 41 Infos, 20 Warnings, 20 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2131.824 ; gain = 496.453
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2135.898 ; gain = 501.023
 INFO: [Vivado 12-24828] Executing command : report_drc -file DVI_Top_drc_opted.rpt -pb DVI_Top_drc_opted.pb -rpx DVI_Top_drc_opted.rpx
 Command: report_drc -file DVI_Top_drc_opted.rpt -pb DVI_Top_drc_opted.pb -rpx DVI_Top_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_drc_opted.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_drc_opted.rpt.
 report_drc completed successfully
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2131.824 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_opt.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2135.898 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_opt.dcp' has been generated.
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -334,11 +334,11 @@ Starting Placer Task
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 17f93975f
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
@@ -348,44 +348,44 @@ WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. T
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1c988a992
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.227 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.219 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
 Phase 1.3 Build Placer Netlist Model | Checksum: 2332cfb49
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.421 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.418 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
 Phase 1.4 Constrain Clocks/Macros | Checksum: 2332cfb49
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.423 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.420 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 1 Placer Initialization | Checksum: 2332cfb49
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.427 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.422 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
 Phase 2.1 Floorplanning | Checksum: 1ce3f72b3
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.495 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.488 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
 Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1d9b96a31
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.552 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.541 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
 Phase 2.3 Post-Processing in Floorplanning | Checksum: 1d9b96a31
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.553 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.542 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
 
 Phase 2.4.1 UpdateTiming Before Physical Synthesis
 Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 2265e030b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 2.4.2 Physical Synthesis In Placer
 INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 27 LUT instances to create LUTNM shape
@@ -401,7 +401,7 @@ INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was
 INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -425,53 +425,53 @@ Summary of Physical Synthesis Optimizations
 
 Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1da79eb82
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 2.4 Global Placement Core | Checksum: 1d4505b37
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 2 Global Placement | Checksum: 1d4505b37
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
 Phase 3.1 Commit Multi Column Macros | Checksum: 1c627bcdd
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
 Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 177662583
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
 Phase 3.3 Area Swap Optimization | Checksum: 199938a69
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
 Phase 3.4 Pipeline Register Optimization | Checksum: 21f441c07
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
 Phase 3.5 Small Shape Detail Placement | Checksum: 2b2ae5756
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
 Phase 3.6 Re-assign LUT pins | Checksum: 20960722c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
 Phase 3.7 Pipeline Register Optimization | Checksum: 177da668c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 3 Detail Placement | Checksum: 177da668c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -490,30 +490,30 @@ INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximu
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=33.076 | TNS=0.000 |
 Phase 1 Physical Synthesis Initialization | Checksum: 17f995bbe
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 2135.898 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
 Ending Physical Synthesis Task | Checksum: 1bc2333f2
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 4.1.1.1 BUFG Insertion | Checksum: 1ec0c0bae
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 4.1.1.2 Post Placement Timing Optimization
 INFO: [Place 30-746] Post Placement Timing Summary WNS=33.076. For the most accurate timing information please run report_timing.
 Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 151a587e9
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 4.1 Post Commit Optimization | Checksum: 151a587e9
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
 Phase 4.2 Post Placement Cleanup | Checksum: 151a587e9
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -534,49 +534,49 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 
 Phase 4.3.1 Print Estimated Congestion | Checksum: 151a587e9
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 4.3 Placer Reporting | Checksum: 151a587e9
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Phase 4 Post Placement Optimization and Clean-Up | Checksum: 18738fb39
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Ending Placer Task | Checksum: 14cb20529
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2135.898 ; gain = 0.000
 76 Infos, 21 Warnings, 20 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
 INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
 Running report generation with 2 threads.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file DVI_Top_utilization_placed.rpt -pb DVI_Top_utilization_placed.pb
 INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file DVI_Top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2131.824 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2135.898 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_io -file DVI_Top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2131.824 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2135.898 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.079 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.105 . Memory (MB): peak = 2131.824 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_placed.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 2135.898 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_placed.dcp' has been generated.
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.162 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 2135.898 ; gain = 0.000
 INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 33.076 | TNS= 0.000 | 
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
@@ -584,17 +584,17 @@ INFO: [Common 17-83] Releasing license: Implementation
 87 Infos, 21 Warnings, 20 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2131.824 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.074 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2135.898 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2131.824 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 2131.824 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_physopt.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2135.898 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.099 . Memory (MB): peak = 2135.898 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -612,25 +612,25 @@ Checksum: PlaceDB: 70f5f5b2 ConstDB: 0 ShapeSum: 3b3ab320 RouteDB: a0815c57
 Post Restoration Checksum: NetGraph: cf2570b2 | NumContArr: f05776be | Constraints: c2a8fa9d | Timing: c2a8fa9d
 Phase 1 Build RT Design | Checksum: 344cedcaa
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2167.055 ; gain = 35.230
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2165.738 ; gain = 29.840
 
 Phase 2 Router Initialization
 
 Phase 2.1 Fix Topology Constraints
 Phase 2.1 Fix Topology Constraints | Checksum: 344cedcaa
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2167.055 ; gain = 35.230
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2165.738 ; gain = 29.840
 
 Phase 2.2 Pre Route Cleanup
 Phase 2.2 Pre Route Cleanup | Checksum: 344cedcaa
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2167.055 ; gain = 35.230
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2165.738 ; gain = 29.840
  Number of Nodes with overlaps = 0
 
 Phase 2.3 Update Timing
 Phase 2.3 Update Timing | Checksum: 241aff48a
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2216.363 ; gain = 80.465
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=33.128 | TNS=0.000  | WHS=-0.162 | THS=-4.849 |
 
 
@@ -648,22 +648,22 @@ Router Utilization Summary
 
 Phase 2 Router Initialization | Checksum: 26f9d861c
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 3 Global Routing
 Phase 3 Global Routing | Checksum: 26f9d861c
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 4 Initial Routing
 
 Phase 4.1 Initial Net Routing Pass
 Phase 4.1 Initial Net Routing Pass | Checksum: 1a02bc980
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2216.363 ; gain = 80.465
 Phase 4 Initial Routing | Checksum: 1a02bc980
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 5 Rip-up And Reroute
 
@@ -674,10 +674,10 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=32.726 | TNS=0.000  | WHS
 
 Phase 5.1 Global Iteration 0 | Checksum: 289565f92
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 Phase 5 Rip-up And Reroute | Checksum: 289565f92
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 6 Delay and Skew Optimization
 
@@ -686,20 +686,20 @@ Phase 6.1 Delay CleanUp
 Phase 6.1.1 Update Timing
 Phase 6.1.1 Update Timing | Checksum: 26e64399c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=32.733 | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
 Phase 6.1 Delay CleanUp | Checksum: 26e64399c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 6.2 Clock Skew Optimization
 Phase 6.2 Clock Skew Optimization | Checksum: 26e64399c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 Phase 6 Delay and Skew Optimization | Checksum: 26e64399c
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 7 Post Hold Fix
 
@@ -708,10 +708,10 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=32.733 | TNS=0.000  | WHS
 
 Phase 7.1 Hold Fix Iter | Checksum: 1eb82bba5
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 Phase 7 Post Hold Fix | Checksum: 1eb82bba5
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 8 Route finalize
 
@@ -729,24 +729,24 @@ Router Utilization Summary
 
 Phase 8 Route finalize | Checksum: 1eb82bba5
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
 Phase 9 Verifying routed nets | Checksum: 1eb82bba5
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 10 Depositing Routes
 Phase 10 Depositing Routes | Checksum: 252376e29
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 11 Post Process Routing
 Phase 11 Post Process Routing | Checksum: 252376e29
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Phase 12 Post Router Timing
 INFO: [Route 35-57] Estimated Timing Summary | WNS=32.733 | TNS=0.000  | WHS=0.036  | THS=0.000  |
@@ -754,34 +754,34 @@ INFO: [Route 35-57] Estimated Timing Summary | WNS=32.733 | TNS=0.000  | WHS=0.0
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
 Phase 12 Post Router Timing | Checksum: 252376e29
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
-Total Elapsed time in route_design: 15.687 secs
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
+Total Elapsed time in route_design: 15.718 secs
 
 Phase 13 Post-Route Event Processing
 Phase 13 Post-Route Event Processing | Checksum: ddc5434b
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 INFO: [Route 35-16] Router Completed Successfully
 Ending Routing Task | Checksum: ddc5434b
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2217.488 ; gain = 85.664
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2216.363 ; gain = 80.465
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 102 Infos, 21 Warnings, 20 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2217.488 ; gain = 85.664
+route_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2216.363 ; gain = 80.465
 INFO: [Vivado 12-24828] Executing command : report_drc -file DVI_Top_drc_routed.rpt -pb DVI_Top_drc_routed.pb -rpx DVI_Top_drc_routed.rpx
 Command: report_drc -file DVI_Top_drc_routed.rpt -pb DVI_Top_drc_routed.pb -rpx DVI_Top_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_drc_routed.rpt.
 report_drc completed successfully
 INFO: [Vivado 12-24828] Executing command : report_methodology -file DVI_Top_methodology_drc_routed.rpt -pb DVI_Top_methodology_drc_routed.pb -rpx DVI_Top_methodology_drc_routed.rpx
 Command: report_methodology -file DVI_Top_methodology_drc_routed.rpt -pb DVI_Top_methodology_drc_routed.pb -rpx DVI_Top_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_methodology_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_methodology_drc_routed.rpt.
 report_methodology completed successfully
 INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -report_unconstrained -file DVI_Top_timing_summary_routed.rpt -pb DVI_Top_timing_summary_routed.pb -rpx DVI_Top_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -806,17 +806,17 @@ INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 INFO: [Timing 38-480] Writing timing data to binary archive.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2217.488 ; gain = 0.000
-Wrote PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.077 . Memory (MB): peak = 2217.488 ; gain = 0.000
-Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2217.488 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2216.363 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 2216.363 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2216.363 ; gain = 0.000
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2217.488 ; gain = 0.000
-Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2217.488 ; gain = 0.000
-Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2217.488 ; gain = 0.000
-Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.123 . Memory (MB): peak = 2217.488 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_routed.dcp' has been generated.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2216.363 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2216.363 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2216.363 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 2216.363 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1/DVI_Top_routed.dcp' has been generated.
 Command: write_bitstream -force DVI_Top.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -847,5 +847,5 @@ INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT dev
 INFO: [Common 17-83] Releasing license: Implementation
 134 Infos, 24 Warnings, 20 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2586.262 ; gain = 368.773
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 11:08:55 2025...
+write_bitstream: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2592.945 ; gain = 376.582
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 11:47:57 2025...

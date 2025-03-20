@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Progh/Code/Project_RetroGame/FAT/CharacterLevelMove.runs/impl_1'
+HD_PWD='C:/Progh/Code/Project_RetroGame/Retrogame2425/FAT/CharacterLevelMove.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
