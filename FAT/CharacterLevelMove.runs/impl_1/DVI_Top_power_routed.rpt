@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Thu Mar 20 11:47:46 2025
+| Date             : Thu Mar 20 12:03:55 2025
 | Host             : DESKTOP-H0VVJ00 running 64-bit major release  (build 9200)
 | Command          : report_power -file DVI_Top_power_routed.rpt -pb DVI_Top_power_summary_routed.pb -rpx DVI_Top_power_routed.rpx
 | Design           : DVI_Top
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |      620 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      222 |     20800 |            1.07 |
-|   Register     |    <0.001 |      234 |     41600 |            0.56 |
+| Slice Logic    |    <0.001 |      627 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      227 |     20800 |            1.09 |
+|   Register     |    <0.001 |      236 |     41600 |            0.57 |
 |   CARRY4       |    <0.001 |       26 |      8150 |            0.32 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |       18 |     32600 |            0.06 |
 |   Others       |     0.000 |       65 |       --- |             --- |
-| Signals        |    <0.001 |      627 |       --- |             --- |
+| Signals        |    <0.001 |      631 |       --- |             --- |
 | Block RAM      |     0.004 |     28.5 |        50 |           57.00 |
 | MMCM           |     0.116 |        1 |         5 |           20.00 |
 | I/O            |     0.010 |       20 |       106 |           18.87 |

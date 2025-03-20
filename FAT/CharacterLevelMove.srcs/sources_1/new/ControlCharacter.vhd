@@ -26,7 +26,7 @@ begin
             Y_Out <= unsigned(spi_data_in(25 downto 16));
 
             -- De rest wordt genegeerd. Voorbeeld: zet RICHTING constant op '0'
-            RICHTING <= '0';
+            RICHTING <= spi_data_in(10);
         end if;
     end process;
 

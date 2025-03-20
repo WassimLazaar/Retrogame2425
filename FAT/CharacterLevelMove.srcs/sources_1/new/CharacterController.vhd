@@ -130,11 +130,12 @@ begin
             end if;
                 
             -- Stel het ROM-adres samen.s
-            if Richting = '1' then
+            if Richting = '0' then
                 -- Flip de X-coördinaten voor links door te beginnen bij het hoogste adres
                 rom_addr <= std_logic_vector(local_y(4 downto 0) & to_unsigned(31 - to_integer(local_x(4 downto 0)), 5));
             else
-                rom_addr <= std_logic_vector(local_y(4 downto 0) & local_x(4 downto 0));  -- Normale uitlezing voor rechts
+                rom_addr <= std_logic_vector(local_y(4 downto 0) & local_x(4 downto 0));  
+                -- Normale uitlezing voor rechts
             end if;
             
             else
