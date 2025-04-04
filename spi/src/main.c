@@ -48,18 +48,21 @@ int jumpSpeed1 = 0;
 int jumpStrength1 = 15;
 bool inAir1    = true;
 bool facingRight1 = true;
+bool moving1 = false;
 
 /* Speler 2 (voor demo) */
-uint16_t pos_x2 = 250, pos_y2 = 250;
-int speed2     = 2;
+uint16_t pos_x2 = 580, pos_y2 = 280;
+int speed2     = 4;
 int gravity2   = 1;
 int jumpSpeed2 = 0;
+int jumpStrength2 = 15;
 bool inAir2    = true;
 bool facingRight2 = false;
+bool moving2 = false;
 
-uint16_t pack_x(uint16_t pos_x, bool facingRight)
+uint16_t pack_x(uint16_t pos_x, bool facingRight, bool moving)
 {
-    return (pos_x & 0x3FF) | ((facingRight ? 1 : 0) << 10);
+    return (pos_x & 0x3FF) | ((facingRight ? 1 : 0) << 10) | ((moving ? 1 : 0) << 11);
 }
 
 /* ---------- SPI: Sending 64 Bits ---------- */
@@ -196,49 +199,76 @@ void xBorderCheck1(void)
 /* ---------- (Optional) Collision Logic for Player 2 ---------- */
 /* Below is just a skeleton if you want to do the same for player 2. 
    If not needed, you can remove these. */
-void yCollisionCheck2(void)
-{
-    bool onGround = false;
-
-    for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
-        Hitbox hb = hitboxes[i];
-        if (pos_x2 + playerSize > hb.x1 && pos_x2 - playerSize < hb.x2) {
-            if (pos_y2 + playerSize >= hb.y1) {
-                pos_y2    = hb.y1 - playerSize;
-                jumpSpeed2 = 0;
-                onGround  = true;
-                break;
-            }
-        }
-    }
-
-    if (onGround) {
-        inAir2 = false;
-    }
-}
-
-void yBorderCheck2(void)
-{
-    if (inAir2) {
-        pos_y2 -= jumpSpeed2;
-        jumpSpeed2 -= gravity2;
-    }
-    if (pos_y2 + playerSize >= Ybound) {
-        pos_y2    = Ybound - playerSize;
-        jumpSpeed2 = 0;
-        inAir2    = false;
-    }
-}
-
-void xBorderCheck2(void)
-{
-    if (pos_x2 < 0) {
-        pos_x2 = 0;
-    }
-    if (pos_x2 > Xbound - playerSize) {
-        pos_x2 = Xbound - playerSize;
-    }
-}
+   void yCollisionCheck2(void)
+   {
+       bool onGround = false;
+   
+       for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+           Hitbox hb = hitboxes[i];
+   
+           if (pos_x2 + playerSize > hb.x1 && pos_x2 - playerSize < hb.x2) {
+               if (pos_y2 + playerSize >= hb.y1 && pos_y2 <= hb.y1) {
+                   pos_y2    = hb.y1 - playerSize;
+                   jumpSpeed2 = 0;
+                   onGround  = true;
+                   break;
+               }
+               if (pos_y2 - playerSize < hb.y2 && pos_y2 >= hb.y2) {
+                   pos_y2 = hb.y2 + playerSize;
+                   jumpSpeed2 = 0;
+                   break;
+               }
+           }
+       }
+   
+       if (onGround) {
+           inAir2 = false;
+       } else {
+           inAir2 = true;
+       }
+   }
+   
+   void xCollisionCheck2(void)
+   {
+       for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+           Hitbox hb = hitboxes[i];
+   
+           if (pos_y2 > hb.y1 && pos_y2 < hb.y2) {
+               if (pos_x2 + playerSize > hb.x1 && pos_x2 < hb.x1) {
+                   pos_x2 = hb.x1 - playerSize;
+                   break;
+               }
+               if (pos_x2 - playerSize < hb.x2 && pos_x2 > hb.x2) {
+                   pos_x2 = hb.x2 + playerSize;
+                   break;
+               }
+           }
+       }
+   }
+   
+   void yBorderCheck2(void)
+   {
+       if (inAir2) {
+           pos_y2 -= jumpSpeed2;
+           jumpSpeed2 -= gravity2;
+       }
+       if (pos_y2 + playerSize >= Ybound) {
+           pos_y2    = Ybound - playerSize;
+           jumpSpeed2 = 0;
+           inAir2    = false;
+       }
+   }
+   
+   void xBorderCheck2(void)
+   {
+       if (pos_x2 - playerSize <= 0) {
+           pos_x2 = 0 + playerSize;
+       }
+       if (pos_x2 > Xbound - playerSize) {
+           pos_x2 = Xbound - playerSize;
+       }
+   }
+   
 
 /* ---------- Main ---------- */
 int main(void)
@@ -275,11 +305,13 @@ int main(void)
             /* Move right */
             pos_x1 = (pos_x1 < Xbound - playerSize) ? pos_x1 + speed1 : Xbound - playerSize;
             facingRight1 = true;
+            moving1 = true;
         }
         if (values[1] == 0) {
             /* Move left */
             pos_x1 = (pos_x1 > 0) ? pos_x1 - speed1 : 0;
             facingRight1 = false;
+            moving1 = true;
         }
         if ((values[3] == 0) && !inAir1) {
             /* Jump */
@@ -287,18 +319,35 @@ int main(void)
             inAir1     = true;
         }
 
+        if(values[0] != 0 && values [1] != 0){
+            moving1 = false;
+        }
+
+        if(inAir1)
+        moving1 = false;
+
         /* Player 2 example (optional) 
            Suppose Right2= values[6], Left2= values[7], Jump2=values[9], etc. */
         if (values[6] == 0) {
             pos_x2 = (pos_x2 < Xbound - playerSize) ? pos_x2 + speed2 : Xbound - playerSize;
+            facingRight2 = true;
+            moving2 = true;
         }
         if (values[7] == 0) {
             pos_x2 = (pos_x2 > 0) ? pos_x2 - speed2 : 0;
+            facingRight2 = false;
+            moving2= true;
         }
         if ((values[9] == 0) && !inAir2) {
-            jumpSpeed2 = 10;
+            jumpSpeed2 = jumpStrength2;
             inAir2     = true;
         }
+
+        if(values[6] != 0 && values [7] != 0){
+            moving2 = false;
+        }
+        if(inAir2)
+        moving2 = false;
 
         /* Update Player 1 collisions/movement */
         yBorderCheck1();
@@ -309,6 +358,7 @@ int main(void)
         /* Update Player 2 collisions/movement */
         yBorderCheck2();
         yCollisionCheck2();
+        xCollisionCheck2();
         xBorderCheck2();
 
         /* Print positions */
@@ -322,13 +372,13 @@ int main(void)
          *   bits [63:48] = pos_y2
          * ------------------------------------------------------ */
 
-        uint16_t packed_x1 = pack_x(pos_x1, facingRight1);
-        uint16_t packed_x2 = pack_x(pos_x2, facingRight2);
+        uint16_t packed_x1 = pack_x(pos_x1, facingRight1, moving1);
+        uint16_t packed_x2 = pack_x(pos_x2, facingRight2, moving2);
 
         uint64_t code = 0ULL;
         code |= ((uint64_t)packed_x1 & 0xFFFF) <<  0;
         code |= ((uint64_t)pos_y1 & 0xFFFF) << 16;
-        code |= ((uint64_t)pos_x2 & 0xFFFF) << 32;
+        code |= ((uint64_t)packed_x2 & 0xFFFF) << 32;
         code |= ((uint64_t)pos_y2 & 0xFFFF) << 48;
 
         /* Now send these 64 bits via SPI in four 16-bit chunks. */
