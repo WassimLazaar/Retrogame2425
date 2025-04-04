@@ -25,7 +25,6 @@ static const struct gpio_dt_spec buttons[] = {
     GPIO_DT_SPEC_GET(DT_ALIAS(jump2),   gpios),
     GPIO_DT_SPEC_GET(DT_ALIAS(reload2), gpios),
     GPIO_DT_SPEC_GET(DT_ALIAS(shoot2),  gpios),
-
 };
 
 static const struct device *spi_dev;
@@ -39,6 +38,18 @@ Hitbox hitboxes[] = {
 int Xbound = 639;
 int Ybound = 479;
 
+/* Game State Variables (placeholders) */
+uint16_t game_state = 0;          // 0 = waiting, 1 = playing, 2 = game over
+uint16_t round_number = 1;
+uint32_t player1_score = 0;
+uint32_t player2_score = 0;
+uint16_t player1_health = 100;
+uint16_t player2_health = 100;
+uint16_t player1_ammo = 10;
+uint16_t player2_ammo = 10;
+uint16_t time_remaining = 180;    // 3 minuten in seconden
+uint16_t map_index = 0;
+
 /* Speler 1 */
 uint16_t pos_x1 = 50, pos_y1 = 250;
 int playerSize = 16;
@@ -50,9 +61,9 @@ bool inAir1    = true;
 bool facingRight1 = true;
 bool moving1 = false;
 
-/* Speler 2 (voor demo) */
-uint16_t pos_x2 = 580, pos_y2 = 280;
-int speed2     = 4;
+/* Speler 2 */
+uint16_t pos_x2 = 580, pos_y2 = 300;
+int speed2     = 2;
 int gravity2   = 1;
 int jumpSpeed2 = 0;
 int jumpStrength2 = 15;
@@ -65,54 +76,56 @@ uint16_t pack_x(uint16_t pos_x, bool facingRight, bool moving)
     return (pos_x & 0x3FF) | ((facingRight ? 1 : 0) << 10) | ((moving ? 1 : 0) << 11);
 }
 
-/* ---------- SPI: Sending 64 Bits ---------- */
-static void send_spi_64bits(uint64_t data)
+/* ---------- SPI: Sending 512 Bits ---------- */
+static void send_spi_512bits(uint16_t *data_array, size_t array_size)
 {
-    /* Make sure the SPI device is ready */
+    /* Controleer of we niet meer dan 512 bits (32 woorden van 16 bits) versturen */
+    if (array_size > 32) {
+        printk("Error: Te veel data! Maximum is 32 woorden (512 bits)\n");
+        return;
+    }
+
+    /* Zorg ervoor dat het SPI-apparaat klaar is */
     const struct device *spi_dev_local = DEVICE_DT_GET(SPI_DEV);
     if (!spi_dev_local || !device_is_ready(spi_dev_local)) {
         printk("SPI device not found or not ready!\n");
         return;
     }
 
-    /* Configure SPI: 10 MHz, 16 bits per word, MSB first, master mode */
+    /* Configureer SPI: 10 MHz, 16 bits per woord, MSB first, master mode */
     struct spi_config config = {
         .frequency = 10000000,
         .operation = SPI_OP_MODE_MASTER | SPI_WORD_SET(16) | SPI_TRANSFER_MSB,
         .slave     = 0
     };
 
-    /*
-     * Break the 64-bit value into four 16-bit chunks
-     *    data[63:48], data[47:32], data[31:16], data[15:0]
-     */
-    uint16_t buf[4] = {
-        (data >> 48) & 0xFFFF,
-        (data >> 32) & 0xFFFF,
-        (data >> 16) & 0xFFFF,
-        (data >>  0) & 0xFFFF
-    };
-
-    /* Prepare buffers for spi_write() */
-    struct spi_buf tx_bufs[] = {
-        { .buf = &buf[0], .len = sizeof(uint16_t) },
-        { .buf = &buf[1], .len = sizeof(uint16_t) },
-        { .buf = &buf[2], .len = sizeof(uint16_t) },
-        { .buf = &buf[3], .len = sizeof(uint16_t) },
-    };
+    /* Bereid buffers voor spi_write() */
+    struct spi_buf tx_bufs[32]; /* Maximaal 32 woorden van 16 bits = 512 bits */
+    
+    /* Vul de spi_buf structuren met de data uit de array */
+    for (size_t i = 0; i < array_size; i++) {
+        tx_bufs[i].buf = &data_array[i];
+        tx_bufs[i].len = sizeof(uint16_t);
+    }
+    
     struct spi_buf_set tx = {
         .buffers = tx_bufs,
-        .count   = 4
+        .count   = array_size
     };
 
-
-    /* Send the data */
+    /* Verstuur de data */
     int ret = spi_write(spi_dev_local, &config, &tx);
     if (ret) {
         printk("SPI write failed: %d\n", ret);
     } else {
-        printk("SPI sent: 0x%016llX\n", (unsigned long long)data);
+        printk("SPI sent: %d woorden (16-bit) = %d bits\n", array_size, array_size * 16);
     }
+
+    printk("SPI data (hex): ");
+    for (size_t i = 0; i < array_size; i++) {
+        printk("%04X ", data_array[i]);
+    }
+    printk("\n");
 }
 
 /* ---------- Collision Logic for Player 1 ---------- */
@@ -125,7 +138,7 @@ void yCollisionCheck1(void)
 
         /* Eenvoudige check: Is de X-range overlappend met deze hitbox? */
         if (pos_x1 + playerSize > hb.x1 && pos_x1 - playerSize < hb.x2) {
-            /* Check of we ‘bovenop’ de hitbox terechtkomen */
+            /* Check of we 'bovenop' de hitbox terechtkomen */
             if (pos_y1 + playerSize >= hb.y1 && pos_y1 <= hb.y1) {
                 pos_y1    = hb.y1 - playerSize;
                 jumpSpeed1 = 0;
@@ -139,8 +152,6 @@ void yCollisionCheck1(void)
                 break;
             }
         }
-
-        
     }
 
     if (onGround) {
@@ -196,79 +207,76 @@ void xBorderCheck1(void)
     }
 }
 
-/* ---------- (Optional) Collision Logic for Player 2 ---------- */
-/* Below is just a skeleton if you want to do the same for player 2. 
-   If not needed, you can remove these. */
-   void yCollisionCheck2(void)
-   {
-       bool onGround = false;
-   
-       for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
-           Hitbox hb = hitboxes[i];
-   
-           if (pos_x2 + playerSize > hb.x1 && pos_x2 - playerSize < hb.x2) {
-               if (pos_y2 + playerSize >= hb.y1 && pos_y2 <= hb.y1) {
-                   pos_y2    = hb.y1 - playerSize;
-                   jumpSpeed2 = 0;
-                   onGround  = true;
-                   break;
-               }
-               if (pos_y2 - playerSize < hb.y2 && pos_y2 >= hb.y2) {
-                   pos_y2 = hb.y2 + playerSize;
-                   jumpSpeed2 = 0;
-                   break;
-               }
-           }
-       }
-   
-       if (onGround) {
-           inAir2 = false;
-       } else {
-           inAir2 = true;
-       }
-   }
-   
-   void xCollisionCheck2(void)
-   {
-       for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
-           Hitbox hb = hitboxes[i];
-   
-           if (pos_y2 > hb.y1 && pos_y2 < hb.y2) {
-               if (pos_x2 + playerSize > hb.x1 && pos_x2 < hb.x1) {
-                   pos_x2 = hb.x1 - playerSize;
-                   break;
-               }
-               if (pos_x2 - playerSize < hb.x2 && pos_x2 > hb.x2) {
-                   pos_x2 = hb.x2 + playerSize;
-                   break;
-               }
-           }
-       }
-   }
-   
-   void yBorderCheck2(void)
-   {
-       if (inAir2) {
-           pos_y2 -= jumpSpeed2;
-           jumpSpeed2 -= gravity2;
-       }
-       if (pos_y2 + playerSize >= Ybound) {
-           pos_y2    = Ybound - playerSize;
-           jumpSpeed2 = 0;
-           inAir2    = false;
-       }
-   }
-   
-   void xBorderCheck2(void)
-   {
-       if (pos_x2 - playerSize <= 0) {
-           pos_x2 = 0 + playerSize;
-       }
-       if (pos_x2 > Xbound - playerSize) {
-           pos_x2 = Xbound - playerSize;
-       }
-   }
-   
+/* ---------- Collision Logic for Player 2 ---------- */
+void yCollisionCheck2(void)
+{
+    bool onGround = false;
+
+    for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+        Hitbox hb = hitboxes[i];
+
+        if (pos_x2 + playerSize > hb.x1 && pos_x2 - playerSize < hb.x2) {
+            if (pos_y2 + playerSize >= hb.y1 && pos_y2 <= hb.y1) {
+                pos_y2    = hb.y1 - playerSize;
+                jumpSpeed2 = 0;
+                onGround  = true;
+                break;
+            }
+            if (pos_y2 - playerSize < hb.y2 && pos_y2 >= hb.y2) {
+                pos_y2 = hb.y2 + playerSize;
+                jumpSpeed2 = 0;
+                break;
+            }
+        }
+    }
+
+    if (onGround) {
+        inAir2 = false;
+    } else {
+        inAir2 = true;
+    }
+}
+
+void xCollisionCheck2(void)
+{
+    for (int i = 0; i < ARRAY_SIZE(hitboxes); i++) {
+        Hitbox hb = hitboxes[i];
+
+        if (pos_y2 > hb.y1 && pos_y2 < hb.y2) {
+            if (pos_x2 + playerSize > hb.x1 && pos_x2 < hb.x1) {
+                pos_x2 = hb.x1 - playerSize;
+                break;
+            }
+            if (pos_x2 - playerSize < hb.x2 && pos_x2 > hb.x2) {
+                pos_x2 = hb.x2 + playerSize;
+                break;
+            }
+        }
+    }
+}
+
+void yBorderCheck2(void)
+{
+    if (inAir2) {
+        pos_y2 -= jumpSpeed2;
+        jumpSpeed2 -= gravity2;
+    }
+    if (pos_y2 + playerSize >= Ybound) {
+        pos_y2    = Ybound - playerSize;
+        jumpSpeed2 = 0;
+        inAir2    = false;
+    }
+}
+
+void xBorderCheck2(void)
+{
+    if (pos_x2 - playerSize <= 0) {
+        pos_x2 = 0 + playerSize;
+    }
+    if (pos_x2 > Xbound - playerSize) {
+        pos_x2 = Xbound - playerSize;
+    }
+}
 
 /* ---------- Main ---------- */
 int main(void)
@@ -319,15 +327,10 @@ int main(void)
             inAir1     = true;
         }
 
-        if(values[0] != 0 && values [1] != 0){
+        if((values[0] != 0 && values[1] != 0) | inAir1)
             moving1 = false;
-        }
 
-        if(inAir1)
-        moving1 = false;
-
-        /* Player 2 example (optional) 
-           Suppose Right2= values[6], Left2= values[7], Jump2=values[9], etc. */
+        /* Player 2: Right2 = values[6], Left2 = values[7], Jump2 = values[9], etc. */
         if (values[6] == 0) {
             pos_x2 = (pos_x2 < Xbound - playerSize) ? pos_x2 + speed2 : Xbound - playerSize;
             facingRight2 = true;
@@ -336,18 +339,17 @@ int main(void)
         if (values[7] == 0) {
             pos_x2 = (pos_x2 > 0) ? pos_x2 - speed2 : 0;
             facingRight2 = false;
-            moving2= true;
+            moving2 = true;
         }
         if ((values[9] == 0) && !inAir2) {
             jumpSpeed2 = jumpStrength2;
             inAir2     = true;
         }
 
-        if(values[6] != 0 && values [7] != 0){
-            moving2 = false;
-        }
-        if(inAir2)
+        if((values[6] != 0 && values[7] != 0) | inAir2)
         moving2 = false;
+
+    
 
         /* Update Player 1 collisions/movement */
         yBorderCheck1();
@@ -365,27 +367,45 @@ int main(void)
         printk("P1: X=%d, Y=%d | P2: X=%d, Y=%d\n", pos_x1, pos_y1, pos_x2, pos_y2);
 
         /* ------------------------------------------------------ *
-         * Pack the (x, y) positions of both players into 64 bits:
-         *   bits [15: 0] = pos_x1
-         *   bits [31:16] = pos_y1
-         *   bits [47:32] = pos_x2
-         *   bits [63:48] = pos_y2
+         * Bereid 512 bits (32 woorden van 16 bits) voor te verzenden via SPI:
          * ------------------------------------------------------ */
-
+        
+        uint16_t spi_data[32] = {0}; // Initialiseer alle waarden op 0
+        
+        /* Spelerposities (eerste 64 bits, net als in originele code) */
         uint16_t packed_x1 = pack_x(pos_x1, facingRight1, moving1);
         uint16_t packed_x2 = pack_x(pos_x2, facingRight2, moving2);
+        
+        spi_data[31] = packed_x1;              // bits [15:0]   = pos_x1 + facing1
+        spi_data[30] = pos_y1;                 // bits [31:16]  = pos_y1
+        spi_data[29] = packed_x2;              // bits [47:32]  = pos_x2 + facing2
+        spi_data[28] = pos_y2;                 // bits [63:48]  = pos_y2
+        
+        /* Game State en andere placeholders (voor toekomstige uitbreidingen) */
+        /*
+        spi_data[27] = 0xFFFF;             // bits [79:64]  = huidige game state
+        spi_data[26] = 0xFFFF;           // bits [95:80]  = rondenummer
+        spi_data[25] = 0xFFFF; // bits [111:96] = score speler 1 (low)
+        spi_data[24] = 0xFFFF;    // bits [127:112] = score speler 1 (high)
+        spi_data[23] = 0xFFFF; // bits [143:128] = score speler 2 (low)
+        spi_data[22] = 0xFFFF;    // bits [159:144] = score speler 2 (high)
+        spi_data[21] = 0xFFFF;        // bits [175:160] = gezondheid speler 1
+        spi_data[20] = 0xFFFF;        // bits [191:176] = gezondheid speler 2
+        spi_data[19] = 0xFFFF;          // bits [207:192] = munitie speler 1
+        spi_data[18] = 0xFFFF;          // bits [223:208] = munitie speler 2
+        spi_data[17] = 0xFFFF;        // bits [239:224] = resterende tijd
+        spi_data[16] = 0xFFFF;             // bits [255:240] = level/map index
+        */
+       // spi_data[31] = 0x15CD;
 
-        uint64_t code = 0ULL;
-        code |= ((uint64_t)packed_x1 & 0xFFFF) <<  0;
-        code |= ((uint64_t)pos_y1 & 0xFFFF) << 16;
-        code |= ((uint64_t)packed_x2 & 0xFFFF) << 32;
-        code |= ((uint64_t)pos_y2 & 0xFFFF) << 48;
-
-        /* Now send these 64 bits via SPI in four 16-bit chunks. */
-        send_spi_64bits(code);
-
-        /* Short delay */
-        k_msleep(50);
+        /* Ruimte voor toekomstige uitbreidi    ngen (16-31) */
+        // spi_data[16] t/m spi_data[31] blijven 0 (placeholders)
+        
+        /* Verzend alle 32 woorden (512 bits) via SPI */
+        send_spi_512bits(spi_data, 32);
+        
+        /* Korte vertraging */
+        k_msleep(20);
     }
 
     return 0;
