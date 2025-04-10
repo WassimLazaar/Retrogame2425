@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Apr  9 20:27:18 2025
+# Process ID: 9372
+# Current directory: C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1
+# Command line: vivado.exe -log blk_mem_gen_17.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_17.tcl
+# Log file: C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17.vds
+# Journal file: C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1\vivado.jou
+# Running On        :DESKTOP-H0VVJ00
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16804 MB
+# Swap memory       :12348 MB
+# Total Virtual     :29153 MB
+# Available Virtual :8223 MB
+#-----------------------------------------------------------
+source blk_mem_gen_17.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 494.473 ; gain = 200.555
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: blk_mem_gen_17
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 0433630f82edc250 to dir: C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/ip/2024.1/0/4/0433630f82edc250/blk_mem_gen_17.dcp to C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/ip/2024.1/0/4/0433630f82edc250/blk_mem_gen_17_sim_netlist.v to C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/ip/2024.1/0/4/0433630f82edc250/blk_mem_gen_17_sim_netlist.vhdl to C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/ip/2024.1/0/4/0433630f82edc250/blk_mem_gen_17_stub.v to C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/ip/2024.1/0/4/0433630f82edc250/blk_mem_gen_17_stub.vhdl to C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/blk_mem_gen_17_synth_1/blk_mem_gen_17_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP blk_mem_gen_17, cache-ID = 0433630f82edc250.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  9 20:27:32 2025...

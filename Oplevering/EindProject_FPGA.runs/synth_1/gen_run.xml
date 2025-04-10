@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1744269551" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/DVI.dcp">
+  <File Type="PA-TCL" Name="DVI_Top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DVI_Top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="DVI_Top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="DVI_Top.vds"/>
+  <File Type="RDS-UTIL" Name="DVI_Top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="DVI_Top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="DVI_Top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="DVI_Top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="DVI_Top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CharacterController.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CharacterControllerPlayer2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ControlCharacter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ControlCharacterPlayer2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DVI_Display.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DisplayBullet.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DisplayHUD.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DisplayMenus.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DisplayRounds.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Displaylevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ReadSpi.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/XY_GEN.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Week 5 + 6 - Bounching Square - Ball/DVI.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../Downloads/Bijlage opdrachten/Bijlage opdrachten/Week 5 + 6 - Bounching Square - Ball/DVI.vhd"/>
+        <Attr Name="ImportTime" Val="1736165335"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/level_data_pkg.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFileOpslag/Beter1.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../POCS/ShowCharacter/CoeFileOpslag/Beter1.coe"/>
+        <Attr Name="ImportTime" Val="1742208668"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFileOpslag/Beter2.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../POCS/ShowCharacter/CoeFileOpslag/Beter2.coe"/>
+        <Attr Name="ImportTime" Val="1742208675"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFileOpslag/Beter4.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../POCS/ShowCharacter/CoeFileOpslag/Beter4.coe"/>
+        <Attr Name="ImportTime" Val="1742208702"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFileOpslag/Beter3.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../POCS/ShowCharacter/CoeFileOpslag/Beter3.coe"/>
+        <Attr Name="ImportTime" Val="1742208691"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/MapBeter.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FAT/CoeFilesOpslag/MapBeter.coe"/>
+        <Attr Name="ImportTime" Val="1742382508"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/bazookFrame1.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FAT/CoeFilesOpslag/bazookFrame1.coe"/>
+        <Attr Name="ImportTime" Val="1743760837"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/bazookFrame2.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FAT/CoeFilesOpslag/bazookFrame2.coe"/>
+        <Attr Name="ImportTime" Val="1743760844"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/bazookFrame3.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FAT/CoeFilesOpslag/bazookFrame3.coe"/>
+        <Attr Name="ImportTime" Val="1743760851"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/bazookFrame4.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../FAT/CoeFilesOpslag/bazookFrame4.coe"/>
+        <Attr Name="ImportTime" Val="1743760859"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/bulletR.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/CoeFilesOpslag/bulletR.coe"/>
+        <Attr Name="ImportTime" Val="1743674653"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/ammo.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/CoeFilesOpslag/ammo.coe"/>
+        <Attr Name="ImportTime" Val="1744128296"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CoeFilesOpslag/emptyammo.coe">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/CoeFilesOpslag/emptyammo.coe"/>
+        <Attr Name="ImportTime" Val="1744127908"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/ammo.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/emptyshell.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/heartHealth.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/emptyheart.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/menudefinitive.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/creditsssss.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/optionsbeter.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/highscorebeter.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/mapdefinitive.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/CoeFilesOpslag/creditsverbeterder.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="DVI_Top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/const.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/kontstains.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/const.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/DVI.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clkDVIprescaler"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_14"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_9"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_15"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_16"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_17"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_6"/>
+</GenRun>

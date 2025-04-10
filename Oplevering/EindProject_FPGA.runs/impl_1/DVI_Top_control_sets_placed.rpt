@@ -1,0 +1,95 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Apr 10 09:21:09 2025
+| Host         : DESKTOP-H0VVJ00 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file DVI_Top_control_sets_placed.rpt
+| Design       : DVI_Top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    66 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    17 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             340 |          123 |
+| No           | No                    | Yes                    |             392 |          137 |
+| No           | Yes                   | No                     |             191 |           68 |
+| Yes          | No                    | No                     |             302 |          115 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              29 |           17 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+---------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|           Clock Signal          |             Enable Signal             |                               Set/Reset Signal                              | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------+---------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|  prescaler_instance/inst/clk_25 |                                       | dvi_driver_inst/hsync_internal_i_1_n_0                                      |                1 |              1 |         1.00 |
+|  prescaler_instance/inst/clk_25 |                                       | dvi_driver_inst/vsync_internal_i_1_n_0                                      |                1 |              1 |         1.00 |
+|  prescaler_instance/inst/clk_25 | dvi_driver_inst/vcount_int[9]_i_2_n_0 | dvi_driver_inst/vcount_int[9]_i_1_n_0                                       |                5 |              9 |         1.80 |
+|  prescaler_instance/inst/clk_25 |                                       | dvi_driver_inst/p_0_in__0                                                   |                4 |             10 |         2.50 |
+|  prescaler_instance/inst/clk_25 | dvi_driver_inst/E[0]                  | dvi_driver_inst/hcount_int_reg[7]_2[0]                                      |                6 |             10 |         1.67 |
+|  prescaler_instance/inst/clk_25 | dvi_driver_inst/E[0]                  | dvi_driver_inst/hcount_int_reg[7]_3[0]                                      |                6 |             10 |         1.67 |
+|  prescaler_instance/inst/clk_25 |                                       | pixel_gen_inst/stateGame[3]                                                 |                4 |             13 |         3.25 |
+|  prescaler_instance/inst/clk_25 |                                       | dvi_driver_inst/hcount_int_reg[7]_1                                         |                5 |             20 |         4.00 |
+|  prescaler_instance/inst/clk_25 |                                       | pixel_gen_inst/DisplayCharacter_inst/divider_counter[21]_i_1_n_0            |                7 |             22 |         3.14 |
+|  prescaler_instance/inst/clk_25 |                                       | pixel_gen_inst/DisplayCharacter_inst_Player2/divider_counter[21]_i_1__0_n_0 |                6 |             22 |         3.67 |
+|  prescaler_instance/inst/clk_25 | dvi_driver_inst/E[0]                  |                                                                             |               10 |             40 |         4.00 |
+|  prescaler_instance/inst/clk_25 |                                       | dvi_driver_inst/vcount_int_reg[9]_10[0]                                     |               19 |             51 |         2.68 |
+|  prescaler_instance/inst/clk_25 |                                       | dvi_driver_inst/SR[0]                                                       |               21 |             51 |         2.43 |
+|  SCK_IBUF_BUFG                  |                                       |                                                                             |                9 |             51 |         5.67 |
+|  SCK_IBUF_BUFG                  | Spi_instance/E[0]                     |                                                                             |              105 |            262 |         2.50 |
+|  prescaler_instance/inst/clk_25 |                                       |                                                                             |              114 |            316 |         2.77 |
+|  SCK_IBUF_BUFG                  |                                       | Spi_instance/bit_count[8]_i_2_n_0                                           |              137 |            392 |         2.86 |
++---------------------------------+---------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

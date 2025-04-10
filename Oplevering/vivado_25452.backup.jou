@@ -1,0 +1,307 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Apr  9 19:17:42 2025
+# Process ID: 25452
+# Current directory: C:/Progh/Code/Project_RetroGame/Oplevering
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7980 C:\Progh\Code\Project_RetroGame\Oplevering\EindProject_FPGA.xpr
+# Log file: C:/Progh/Code/Project_RetroGame/Oplevering/vivado.log
+# Journal file: C:/Progh/Code/Project_RetroGame/Oplevering\vivado.jou
+# Running On        :DESKTOP-H0VVJ00
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16804 MB
+# Swap memory       :12348 MB
+# Total Virtual     :29153 MB
+# Available Virtual :11197 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/new/DisplayMenus.vhd w ]
+add_files C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/new/DisplayMenus.vhd
+update_compile_order -fileset sources_1
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_14
+set_property -dict [list \
+  CONFIG.Coe_File {C:/Progh/Code/Project_RetroGame/Oplevering/CoeFilesOpslag/menudefinitive.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {76800} \
+  CONFIG.Write_Width_A {2} \
+] [get_ips blk_mem_gen_14]
+generate_target {instantiation_template} [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci]
+generate_target all [get_files  c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_14] }
+export_ip_user_files -of_objects [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci]
+launch_runs blk_mem_gen_14_synth_1 -jobs 8
+wait_on_run blk_mem_gen_14_synth_1
+export_simulation -of_objects [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_14/blk_mem_gen_14.xci] -directory C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.ip_user_files/sim_scripts -ip_user_files_dir C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.ip_user_files -ipstatic_source_dir C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/modelsim} {questa=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/questa} {riviera=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/riviera} {activehdl=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_15
+set_property -dict [list \
+  CONFIG.Coe_File {C:/Progh/Code/Project_RetroGame/Oplevering/CoeFilesOpslag/creditsssss.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {76800} \
+  CONFIG.Write_Width_A {2} \
+] [get_ips blk_mem_gen_15]
+generate_target {instantiation_template} [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15.xci]
+generate_target all [get_files  c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15.xci]
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_16
+set_property -dict [list \
+  CONFIG.Coe_File {C:/Progh/Code/Project_RetroGame/Oplevering/CoeFilesOpslag/optionsbeter.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {76800} \
+  CONFIG.Write_Width_A {2} \
+] [get_ips blk_mem_gen_16]
+generate_target {instantiation_template} [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16.xci]
+generate_target all [get_files  c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_16/blk_mem_gen_16.xci]
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_17
+set_property -dict [list \
+  CONFIG.Coe_File {C:/Progh/Code/Project_RetroGame/Oplevering/CoeFilesOpslag/highscorebeter.coe} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.Memory_Type {Single_Port_ROM} \
+  CONFIG.Write_Depth_A {76800} \
+  CONFIG.Write_Width_A {2} \
+] [get_ips blk_mem_gen_17]
+generate_target {instantiation_template} [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci]
+generate_target all [get_files  c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_17] }
+export_ip_user_files -of_objects [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci]
+launch_runs blk_mem_gen_17_synth_1 -jobs 8
+wait_on_run blk_mem_gen_17_synth_1
+export_simulation -of_objects [get_files c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_17/blk_mem_gen_17.xci] -directory C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.ip_user_files/sim_scripts -ip_user_files_dir C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.ip_user_files -ipstatic_source_dir C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/modelsim} {questa=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/questa} {riviera=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/riviera} {activehdl=C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+set_property target_language VHDL [current_project]
+reset_run synth_1
+reset_run clkDVIprescaler_synth_1
+reset_run blk_mem_gen_0_synth_1
+reset_run blk_mem_gen_1_synth_1
+reset_run blk_mem_gen_2_synth_1
+reset_run blk_mem_gen_3_synth_1
+reset_run blk_mem_gen_4_synth_1
+reset_run blk_mem_gen_9_synth_1
+reset_run blk_mem_gen_10_synth_1
+reset_run blk_mem_gen_11_synth_1
+reset_run blk_mem_gen_13_synth_1
+reset_run blk_mem_gen_12_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+reset_run blk_mem_gen_11_synth_1
+reset_run blk_mem_gen_13_synth_1
+reset_run blk_mem_gen_12_synth_1
+reset_run blk_mem_gen_7_synth_1
+reset_run blk_mem_gen_5_synth_1
+reset_run blk_mem_gen_8_synth_1
+reset_run blk_mem_gen_6_synth_1
+reset_run clkDVIprescaler_synth_1
+reset_run blk_mem_gen_0_synth_1
+reset_run blk_mem_gen_1_synth_1
+reset_run blk_mem_gen_2_synth_1
+reset_run blk_mem_gen_3_synth_1
+reset_run blk_mem_gen_4_synth_1
+reset_run blk_mem_gen_9_synth_1
+reset_run blk_mem_gen_10_synth_1
+set_property target_language Verilog [current_project]
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+reset_run blk_mem_gen_14_synth_1
+reset_run blk_mem_gen_17_synth_1
+reset_run blk_mem_gen_15_synth_1
+reset_run blk_mem_gen_16_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.runs/impl_1/DVI_Top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+set_property CONFIG.Coe_File {C:/Progh/Code/Project_RetroGame/Oplevering/CoeFilesOpslag/creditsverbeterder.coe} [get_ips blk_mem_gen_15]
+generate_target all [get_files  c:/Progh/Code/Project_RetroGame/Oplevering/EindProject_FPGA.srcs/sources_1/ip/blk_mem_gen_15/blk_mem_gen_15.xci]
+reset_run synth_1
+reset_run blk_mem_gen_15_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
