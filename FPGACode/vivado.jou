@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Mar 16 00:43:32 2025
+# Process ID: 11828
+# Current directory: C:/Users/Rachid/zephyrproject/zephyr/samples/Retrogame2425/FPGACode/SpiTest
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19360 C:\Users\Rachid\zephyrproject\zephyr\samples\Retrogame2425\FPGACode\SpiTest\SpiTest.xpr
+# Log file: C:/Users/Rachid/zephyrproject/zephyr/samples/Retrogame2425/FPGACode/SpiTest/vivado.log
+# Journal file: C:/Users/Rachid/zephyrproject/zephyr/samples/Retrogame2425/FPGACode/SpiTest\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Rachid/zephyrproject/zephyr/samples/Retrogame2425/FPGACode/SpiTest/SpiTest.xpr
+open_project C:/Users/Rachid/zephyrproject/zephyr/samples/Retrogame2425/FPGACode/SpiTest/SpiTest.xpr
